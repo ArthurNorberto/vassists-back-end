@@ -87,6 +87,5 @@ C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Security.Goog
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Owin.xml
-C:\Git\back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsService.csprojResolveAssemblyReference.cache
 C:\Git\back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsProject.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsProject.pdb
