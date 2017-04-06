@@ -1,0 +1,5 @@
+C:\Git\back-end\VAssistsProject\Domínio\bin\Debug\Domínio.dll
+C:\Git\back-end\VAssistsProject\Domínio\bin\Debug\Domínio.pdb
+C:\Git\back-end\VAssistsProject\Domínio\obj\Debug\VAssists.Domínio.csprojResolveAssemblyReference.cache
+C:\Git\back-end\VAssistsProject\Domínio\obj\Debug\Domínio.dll
+C:\Git\back-end\VAssistsProject\Domínio\obj\Debug\Domínio.pdb

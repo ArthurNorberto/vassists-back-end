@@ -10,9 +10,7 @@ namespace VAssistsProject.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
-            return View();
+            return new RedirectResult("~/swagger");
         }
     }
 }
