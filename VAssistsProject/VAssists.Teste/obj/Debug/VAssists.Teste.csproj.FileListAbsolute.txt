@@ -1,0 +1,10 @@
+C:\Git\back-end\VAssistsProject\VAssists.Teste\bin\Debug\VAssists.Teste.dll
+C:\Git\back-end\VAssistsProject\VAssists.Teste\bin\Debug\VAssists.Teste.pdb
+C:\Git\back-end\VAssistsProject\VAssists.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Git\back-end\VAssistsProject\VAssists.Teste\bin\Debug\nunit.framework.dll
+C:\Git\back-end\VAssistsProject\VAssists.Teste\bin\Debug\nunit.framework.xml
+C:\Git\back-end\VAssistsProject\VAssists.Teste\obj\Debug\VAssists.Teste.csprojResolveAssemblyReference.cache
+C:\Git\back-end\VAssistsProject\VAssists.Teste\obj\Debug\VAssists.Teste.dll
+C:\Git\back-end\VAssistsProject\VAssists.Teste\obj\Debug\VAssists.Teste.pdb
+C:\Git\back-end\VAssistsProject\VAssists.Teste\bin\Debug\MySql.Data.dll
+C:\Git\back-end\VAssistsProject\VAssists.Teste\bin\Debug\MySql.Data.xml

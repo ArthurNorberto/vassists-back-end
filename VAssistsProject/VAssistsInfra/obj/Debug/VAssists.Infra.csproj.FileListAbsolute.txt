@@ -3,3 +3,5 @@ C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\VAssistsInfra.pdb
 C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssists.Infra.csprojResolveAssemblyReference.cache
 C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.dll
 C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.pdb
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\MySql.Data.dll
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\MySql.Data.xml
