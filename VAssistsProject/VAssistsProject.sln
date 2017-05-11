@@ -17,6 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.DataTransfer", "VA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.Teste", "VAssists.Teste\VAssists.Teste.csproj", "{9C67F89F-4B98-4381-86B6-D9B62FD14C3D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Artefatos", "Artefatos", "{32265926-71C4-46CC-951F-088BB3F4ED10}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\Arthur\Desktop\SCRIPT_ALTER_TABLE.sql = ..\..\..\Users\Arthur\Desktop\SCRIPT_ALTER_TABLE.sql
+		..\..\..\Users\Arthur\Desktop\SCRIPT_CREATE_TABLE.sql = ..\..\..\Users\Arthur\Desktop\SCRIPT_CREATE_TABLE.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

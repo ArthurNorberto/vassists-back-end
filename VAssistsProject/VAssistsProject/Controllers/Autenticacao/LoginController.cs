@@ -16,19 +16,38 @@ using Microsoft.Owin.Security.OAuth;
 using VAssistsProject.Models;
 using VAssistsProject.Providers;
 using VAssistsProject.Results;
+using System.Web.Http.Description;
+using VAssists.DataTransfer.Seguranca.requests;
+using VAssists.AppService.Seguranca.Interfaces;
+using VAssists.DataTransfer.Seguranca.responses;
 
 namespace VAssistsProject.Controllers
 {
-    //[Authorize]
-    //[RoutePrefix("api/login")]
     public class LoginController : ApiController
     {
+        public ISegurancaAppServico segurancaAppServico;
 
-       
+       public LoginController(ISegurancaAppServico segurancaAppServico)
+        {
+            this.segurancaAppServico = segurancaAppServico;
+
+        }
+
+        [HttpPost]
+        [Route("seguranca/login")]
+        [ResponseType(typeof(UsuarioLogadoResponse))]
+        public IHttpActionResult LogarNoSistema([FromUri] LoginSistemaRequest request)
+        {
+
+            return Ok(segurancaAppServico.LogarNoSistema(request));
+
+        }
 
 
-            
-        
+
+
+
+
 
 
 
