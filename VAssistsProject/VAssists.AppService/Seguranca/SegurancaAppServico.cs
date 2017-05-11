@@ -12,7 +12,7 @@ namespace VAssists.AppService.Seguranca
 {
     public class SegurancaAppServico : ISegurancaAppServico
     {
-        public ISegurancaRepositorio segurancaRepositorio;
+        private readonly ISegurancaRepositorio segurancaRepositorio;
 
         public SegurancaAppServico(ISegurancaRepositorio segurancaRepositorio)
         {
