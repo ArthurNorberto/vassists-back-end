@@ -59,7 +59,6 @@ C:\Git\back-end\VAssistsProject\VAssistsProject\bin\MySql.Data.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\MySql.Data.Entity.EF6.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\MySql.Web.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Newtonsoft.Json.dll
-C:\Git\back-end\VAssistsProject\VAssistsProject\bin\NHibernate.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\nunit.framework.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Owin.dll
@@ -91,7 +90,6 @@ C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.WindowsServer.x
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Microsoft.ApplicationInsights.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Newtonsoft.Json.xml
-C:\Git\back-end\VAssistsProject\VAssistsProject\bin\NHibernate.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\nunit.framework.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\System.Net.Http.Formatting.xml
@@ -135,3 +133,8 @@ C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Domínio.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Domínio.pdb
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.pdb
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.pdb
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.xml
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\NHibernate.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\NHibernate.xml

@@ -1,10 +1,4 @@
-﻿using Domínio.Modelo;
-using Domínio.Usuarios.repositorios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domínio.Usuarios.repositorios;
 using VAssists.AppService.Usuarios.Interfaces;
 using VAssists.DataTransfer.Usuarios.responses;
 
@@ -31,6 +25,5 @@ namespace VAssists.AppService.Usuarios
 
             return usuario;
         }
-
     }
 }

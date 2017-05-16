@@ -9,3 +9,11 @@ C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Domínio.dll
 C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Domínio.pdb
 C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Ninject.dll
 C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Ninject.xml
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\VAssistsInfra.dll.config
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\FluentNHibernate.dll
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Iesi.Collections.dll
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\NHibernate.dll
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\FluentNHibernate.pdb
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\FluentNHibernate.xml
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Iesi.Collections.xml
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\NHibernate.xml
