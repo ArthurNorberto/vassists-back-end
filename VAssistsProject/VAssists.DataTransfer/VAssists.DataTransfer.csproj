@@ -43,6 +43,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguranca\requests\LoginSistemaRequest.cs" />
     <Compile Include="Seguranca\responses\UsuarioLogadoResponse.cs" />
+    <Compile Include="Usuarios\responses\UsuarioResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Usuarios\requests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

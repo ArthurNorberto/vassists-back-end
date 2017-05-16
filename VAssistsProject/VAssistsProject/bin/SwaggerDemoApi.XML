@@ -4,6 +4,28 @@
         <name>VAssistsProject</name>
     </assembly>
     <members>
+        <member name="M:VAssistsProject.App_Start.NinjectWebCommon.Start">
+            <summary>
+            Starts the application
+            </summary>
+        </member>
+        <member name="M:VAssistsProject.App_Start.NinjectWebCommon.Stop">
+            <summary>
+            Stops the application.
+            </summary>
+        </member>
+        <member name="M:VAssistsProject.App_Start.NinjectWebCommon.CreateKernel">
+            <summary>
+            Creates the kernel that will manage your application.
+            </summary>
+            <returns>The created kernel.</returns>
+        </member>
+        <member name="M:VAssistsProject.App_Start.NinjectWebCommon.RegisterServices(Ninject.IKernel)">
+            <summary>
+            Load your modules or register your services here!
+            </summary>
+            <param name="kernel">The kernel.</param>
+        </member>
         <member name="M:VAssistsProject.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
@@ -480,6 +502,49 @@
             Initializes a new instance of the <see cref="T:VAssistsProject.Areas.HelpPage.XmlDocumentationProvider"/> class.
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:VAssistsProject.Controllers.LoginController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VAssistsProject.Controllers.LoginController.#ctor(VAssists.AppService.Seguranca.Interfaces.ISegurancaAppServico)">
+            <summary>
+            
+            </summary>
+            <param name="segurancaAppServico"></param>
+        </member>
+        <member name="M:VAssistsProject.Controllers.LoginController.LogarNoSistema(VAssists.DataTransfer.Seguranca.requests.LoginSistemaRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.LoginController.DeslogarNoSistema(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codigoUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VAssistsProject.Controllers.Usuario.UsuarioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Usuario.UsuarioController.#ctor(VAssists.AppService.Usuarios.Interfaces.IUsuarioAppServico)">
+            <summary>
+            
+            </summary>
+            <param name="usuarioAppServico"></param>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Usuario.UsuarioController.RetornaUsuario(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codigoUsuario"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

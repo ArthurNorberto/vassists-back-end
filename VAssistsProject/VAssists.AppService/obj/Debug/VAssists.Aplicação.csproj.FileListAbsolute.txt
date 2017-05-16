@@ -9,3 +9,7 @@ C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssistsInfra.dll
 C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\Domínio.pdb
 C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssists.DataTransfer.pdb
 C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssistsInfra.pdb
+C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.dll
+C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.Extensions.Conventions.dll
+C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.xml
+C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.Extensions.Conventions.xml

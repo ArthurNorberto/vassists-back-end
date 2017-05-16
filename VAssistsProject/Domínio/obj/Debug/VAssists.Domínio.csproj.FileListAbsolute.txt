@@ -3,3 +3,7 @@ C:\Git\back-end\VAssistsProject\Domínio\bin\Debug\Domínio.pdb
 C:\Git\back-end\VAssistsProject\Domínio\obj\Debug\VAssists.Domínio.csprojResolveAssemblyReference.cache
 C:\Git\back-end\VAssistsProject\Domínio\obj\Debug\Domínio.dll
 C:\Git\back-end\VAssistsProject\Domínio\obj\Debug\Domínio.pdb
+C:\Git\back-end\VAssistsProject\Domínio\bin\Debug\Ninject.dll
+C:\Git\back-end\VAssistsProject\Domínio\bin\Debug\Ninject.Extensions.Conventions.dll
+C:\Git\back-end\VAssistsProject\Domínio\bin\Debug\Ninject.xml
+C:\Git\back-end\VAssistsProject\Domínio\bin\Debug\Ninject.Extensions.Conventions.xml

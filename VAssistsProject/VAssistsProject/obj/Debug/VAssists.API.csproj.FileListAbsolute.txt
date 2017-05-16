@@ -121,5 +121,17 @@ C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Security.Micr
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Owin.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsProject.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsProject.pdb
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.Common.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.WebApi.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.WebApi.WebHost.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.Common.xml
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.WebApi.xml
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.WebApi.WebHost.xml
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.Mvc.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.Mvc.xml
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Extensions.Conventions.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Ninject.Extensions.Conventions.xml
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Domínio.dll
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.dll
 C:\Git\back-end\VAssistsProject\VAssistsProject\bin\Domínio.pdb
+C:\Git\back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.pdb

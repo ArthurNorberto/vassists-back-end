@@ -1,4 +1,5 @@
-﻿using Domínio.Seguranca.repositorios;
+﻿using Domínio.Modelo;
+using Domínio.Seguranca.repositorios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,20 @@ namespace VAssistsInfra.Seguranca.repositorios
 {
     public class SegurancaRepositorio : ISegurancaRepositorio
     {
-        public dynamic LogarNoSistema(string login, string senha)
+        public Usuario LogarNoSistema(string login, string senha)
         {
-            throw new NotImplementedException();
+            return new Usuario()
+            {
+                idUsuario = 1,
+                nomeUsuario = "Arthur Costa Lima Norberto",
+                email = "arthurcostalima@hotmail.com",
+                perfil = new Perfil()
+                {
+                    idPerfil = 1,
+                    idtPerfil = "A",
+                    nomePerfil = "Administrador"
+                }
+            };
         }
     }
 }

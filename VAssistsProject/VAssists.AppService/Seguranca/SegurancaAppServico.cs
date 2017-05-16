@@ -1,9 +1,5 @@
-﻿using Domínio.Seguranca.repositorios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Domínio.Seguranca.repositorios;
 using VAssists.AppService.Seguranca.Interfaces;
 using VAssists.DataTransfer.Seguranca.requests;
 using VAssists.DataTransfer.Seguranca.responses;
@@ -19,14 +15,20 @@ namespace VAssists.AppService.Seguranca
             this.segurancaRepositorio = segurancaRepositorio;
         }
 
+        public void DeslogarNoSistema(int codigoUsuario)
+        {
+            
+        }
+
         public UsuarioLogadoResponse LogarNoSistema(LoginSistemaRequest request)
         {
             var usuario = segurancaRepositorio.LogarNoSistema(request.login, request.senha);
 
             UsuarioLogadoResponse response = new UsuarioLogadoResponse()
             {
-                idUsuario = usuario.IDUSUARIO,
-                nomeUsuario = usuario.NOMEUSUARIO
+                idUsuario = usuario.idUsuario,
+                nomeUsuario = usuario.nomeUsuario,
+                perfil = usuario.perfil.idtPerfil
             };
 
             return response;

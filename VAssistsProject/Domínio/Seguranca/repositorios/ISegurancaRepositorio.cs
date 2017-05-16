@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domínio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Domínio.Seguranca.repositorios
 {
     public interface ISegurancaRepositorio
     {
-        dynamic LogarNoSistema(string login, string senha);
+        Usuario LogarNoSistema(string login, string senha);
     }
 }

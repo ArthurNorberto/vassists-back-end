@@ -7,3 +7,5 @@ C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.dll
 C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.pdb
 C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Domínio.dll
 C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Domínio.pdb
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Ninject.dll
+C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Ninject.xml
