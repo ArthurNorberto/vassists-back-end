@@ -29,9 +29,9 @@ namespace VAssists.AppService.Seguranca
 
             UsuarioLogadoResponse response = new UsuarioLogadoResponse()
             {
-                idUsuario = usuario.idUsuario,
-                nomeUsuario = usuario.nomeUsuario,
-                perfil = usuario.perfil.idtPerfil
+                idUsuario = usuario.IdUsuario,
+                nomeUsuario = usuario.NomeUsuario,
+                perfil = usuario.Perfil.IdtPerfil
             };
 
             return response;

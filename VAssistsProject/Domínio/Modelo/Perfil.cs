@@ -8,9 +8,9 @@ namespace Domínio.Modelo
 {
     public class Perfil
     {
-        public virtual int idPerfil { get; set; }
-        public virtual string nomePerfil { get; set; }
-        public virtual string idtPerfil { get; set; }
+        public virtual int IdPerfil { get; set; }
+        public virtual string NomePerfil { get; set; }
+        public virtual string IdtPerfil { get; set; }
 
     }
 }

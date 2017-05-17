@@ -30,8 +30,8 @@ namespace VAssists.AppService.Pontos
 
             PontoResponse response = new PontoResponse
             {
-                Latitude = resultado.latitude,
-                Longitude = resultado.longitude
+                Latitude = resultado.Latitude,
+                Longitude = resultado.Longitude
             };
 
             return response;

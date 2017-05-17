@@ -1,10 +1,6 @@
-﻿using Domínio.Pontos;
+﻿using Domínio.Modelo;
+using Domínio.Pontos;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domínio.Modelo;
 
 namespace VAssistsInfra.Pontos
 {
@@ -19,9 +15,9 @@ namespace VAssistsInfra.Pontos
         {
             return new Ponto
             {
-                idPonto = 1,
-                latitude  = 212,
-                longitude = 231
+                IdPonto = 1,
+                Latitude = 212,
+                Longitude = 231
             };
         }
     }

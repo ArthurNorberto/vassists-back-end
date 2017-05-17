@@ -9,11 +9,12 @@ namespace Domínio.Modelo
 {
     public class Usuario
     {
-        public virtual int idUsuario { get; set; }
-        public virtual string nomeUsuario { get; set; }
-        public virtual string email { get; set; }
-        public virtual string senha { get; set; }
-        public virtual DateTime dataultimologin { get; set; }
-        public virtual Perfil perfil { get; set; }
+        public virtual int IdUsuario { get; set; }
+        public virtual string NomeUsuario { get; set; }
+        public virtual string Email { get; set; }
+        public virtual string Senha { get; set; }
+        public virtual DateTime Dataultimologin { get; set; }
+        public virtual Perfil Perfil { get; set; }
+
     }
 }

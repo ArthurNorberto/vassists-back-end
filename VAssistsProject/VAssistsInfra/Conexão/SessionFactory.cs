@@ -1,4 +1,4 @@
-﻿using Domínio.Modelo;
+﻿using Domínio.Modelo.Mapeamento;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
@@ -9,6 +9,7 @@ namespace VAssistsInfra.Conexão
     public static class SessionFactory
     {
         public static ISessionFactory _factory;
+        public static readonly string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Producao"].ConnectionString;
 
         public static ISessionFactory Factory
         {
@@ -17,9 +18,9 @@ namespace VAssistsInfra.Conexão
                 if (_factory == null)
                 {
                     _factory = Fluently.Configure()
-                    .Database(MsSqlConfiguration.MsSql2012.ConnectionString("sada"))
-                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<Usuario>())
-                    .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(false, false)).BuildSessionFactory();
+                    .Database(MySQLConfiguration.Standard.ConnectionString(connectionString))
+                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<UsuarioMap>())
+                    .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(false, true)).BuildSessionFactory();
                 }
 
                 return _factory;

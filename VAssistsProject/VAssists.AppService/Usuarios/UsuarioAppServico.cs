@@ -26,8 +26,8 @@ namespace VAssists.AppService.Usuarios
 
             UsuarioResponse usuario = new UsuarioResponse()
             {
-                CodigoUsuario = result.idUsuario,
-                Nome = result.nomeUsuario
+                CodigoUsuario = result.IdUsuario,
+                Nome = result.NomeUsuario
             };
 
             return usuario;

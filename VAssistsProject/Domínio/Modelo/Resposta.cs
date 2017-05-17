@@ -8,9 +8,9 @@ namespace Domínio.Modelo
 {
     public class Resposta
     {
-        public virtual int idResposta { get; set; }
-        public virtual DateTime dataResposta { get; set; }
-        public virtual Ponto ponto { get; set; }
-        public virtual Usuario usuario { get; set; }
+        public virtual int IdResposta { get; set; }
+        public virtual DateTime DataResposta { get; set; }
+        public virtual Ponto Ponto { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

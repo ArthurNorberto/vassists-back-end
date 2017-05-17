@@ -1,10 +1,6 @@
 ﻿using Domínio.Modelo;
 using Domínio.Seguranca.repositorios;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VAssistsInfra.Seguranca.repositorios
 {
@@ -19,14 +15,14 @@ namespace VAssistsInfra.Seguranca.repositorios
         {
             return new Usuario()
             {
-                idUsuario = 1,
-                nomeUsuario = "Arthur Costa Lima Norberto",
-                email = "arthurcostalima@hotmail.com",
-                perfil = new Perfil()
+                IdUsuario = 1,
+                NomeUsuario = "Arthur Costa Lima Norberto",
+                Email = "arthurcostalima@hotmail.com",
+                Perfil = new Perfil()
                 {
-                    idPerfil = 1,
-                    idtPerfil = "A",
-                    nomePerfil = "Administrador"
+                    IdPerfil = 1,
+                    IdtPerfil = "A",
+                    NomePerfil = "Administrador"
                 }
             };
         }

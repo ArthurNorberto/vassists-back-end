@@ -8,7 +8,7 @@ namespace Domínio.Modelo
 {
     public class Tipo
     {
-        public virtual int idTipo { get; set; }
-        public virtual string nomeTipo { get; set; }
+        public virtual int IdTipo { get; set; }
+        public virtual string NomeTipo { get; set; }
     }
 }

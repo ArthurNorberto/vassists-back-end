@@ -4,14 +4,14 @@ namespace Domínio.Modelo
 {
     public class Ponto
     {
-        public virtual int idPonto { get; set; }
-        public virtual DateTime dataCadastrado { get; set; }
-        public virtual DateTime dataResponsido { get; set; }
-        public virtual string observacao { get; set; }
-        public virtual decimal latitude { get; set; }
-        public virtual decimal longitude { get; set; }
-        public virtual Usuario usuario { get; set; }
-        public virtual Tipo tipo { get; set; }
+        public virtual int IdPonto { get; set; }
+        public virtual DateTime DataCadastrado { get; set; }
+        public virtual DateTime DataResponsido { get; set; }
+        public virtual string Observacao { get; set; }
+        public virtual decimal Latitude { get; set; }
+        public virtual decimal Longitude { get; set; }
+        public virtual Usuario Usuario { get; set; }
+        public virtual Tipo Tipo { get; set; }
 
     }
 }

@@ -1,7 +1,7 @@
-using System.Web.Http;
-using WebActivatorEx;
-using VAssistsProject;
 using Swashbuckle.Application;
+using System.Web.Http;
+using VAssistsProject;
+using WebActivatorEx;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -13,7 +13,7 @@ namespace VAssistsProject
         {
             var thisAssembly = typeof(SwaggerConfig).Assembly;
 
-            GlobalConfiguration.Configuration 
+            GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                     {
                         c.SingleApiVersion("v1", "VAssistsProject");
@@ -23,7 +23,6 @@ namespace VAssistsProject
                     })
                 .EnableSwaggerUi(c =>
                     {
-                      
                     });
         }
     }
