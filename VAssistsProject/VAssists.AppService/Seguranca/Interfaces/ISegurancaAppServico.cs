@@ -12,5 +12,6 @@ namespace VAssists.AppService.Seguranca.Interfaces
     {
         UsuarioLogadoResponse LogarNoSistema(LoginSistemaRequest request);
         void DeslogarNoSistema(int codigoUsuario);
+        void CadastroSistema(CadastroUsuarioRequest request);
     }
 }

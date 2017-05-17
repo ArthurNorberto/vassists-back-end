@@ -31,7 +31,7 @@ namespace VAssistsProject.Controllers
         [HttpPost]
         [Route("api/seguranca/login")]
         [ResponseType(typeof(UsuarioLogadoResponse))]
-        public IHttpActionResult LogarNoSistema([FromUri] LoginSistemaRequest request)
+        public IHttpActionResult LogarNoSistema([FromBody] LoginSistemaRequest request)
         {
             return Ok(segurancaAppServico.LogarNoSistema(request));
         }

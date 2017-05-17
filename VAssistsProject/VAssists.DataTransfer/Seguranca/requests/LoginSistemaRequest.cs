@@ -8,7 +8,7 @@ namespace VAssists.DataTransfer.Seguranca.requests
 {
     public class LoginSistemaRequest
     {
-        public string login { get; set; }
-        public string senha { get; set; }
+        public string Login { get; set; }
+        public string Senha { get; set; }
     }
 }

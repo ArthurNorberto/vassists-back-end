@@ -10,6 +10,11 @@ namespace VAssistsInfra.Seguranca.repositorios
 {
     public class SegurancaRepositorio : ISegurancaRepositorio
     {
+        public void CadastroSistema(string nome, string email)
+        {
+            throw new NotImplementedException();
+        }
+
         public Usuario LogarNoSistema(string login, string senha)
         {
             return new Usuario()

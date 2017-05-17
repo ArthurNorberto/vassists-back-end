@@ -528,6 +528,39 @@
             <param name="codigoUsuario"></param>
             <returns></returns>
         </member>
+        <member name="M:VAssistsProject.Controllers.Autenticacao.SegurancaController.#ctor(VAssists.AppService.Seguranca.Interfaces.ISegurancaAppServico)">
+            <summary>
+            
+            </summary>
+            <param name="segurancaAppServico"></param>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Autenticacao.SegurancaController.CadastroSistema(VAssists.DataTransfer.Seguranca.requests.CadastroUsuarioRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.#ctor(VAssists.AppService.Pontos.Interfaces.IRegistroPontoAppServico)">
+            <summary>
+            
+            </summary>
+            <param name="registroPontoAppServico"></param>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.RetornarPonto(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codigoPonto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.RegistrarPonto(VAssists.DataTransfer.Pontos.requests.RegistrarPontoRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
         <member name="T:VAssistsProject.Controllers.Usuario.UsuarioController">
             <summary>
             
@@ -544,6 +577,13 @@
             
             </summary>
             <param name="codigoUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Usuario.UsuarioController.CadastrarUsuario(VAssists.DataTransfer.Usuarios.requests.CadastrarUsuariosRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
             <returns></returns>
         </member>
     </members>

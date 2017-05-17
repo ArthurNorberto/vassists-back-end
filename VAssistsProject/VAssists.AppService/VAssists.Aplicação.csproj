@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ninject\AplicacaoResolver.cs" />
+    <Compile Include="Pontos\HttpPostAttribute.cs" />
+    <Compile Include="Pontos\Interfaces\IRegistroPontoAppServico.cs" />
+    <Compile Include="Pontos\RegistroPontoAppServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguranca\Interfaces\ISegurancaAppServico.cs" />
     <Compile Include="Seguranca\SegurancaAppServico.cs" />

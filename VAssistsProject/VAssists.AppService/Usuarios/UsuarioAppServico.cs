@@ -1,5 +1,7 @@
-﻿using Domínio.Usuarios.repositorios;
+﻿using System;
+using Domínio.Usuarios.repositorios;
 using VAssists.AppService.Usuarios.Interfaces;
+using VAssists.DataTransfer.Usuarios.requests;
 using VAssists.DataTransfer.Usuarios.responses;
 
 namespace VAssists.AppService.Usuarios
@@ -11,6 +13,11 @@ namespace VAssists.AppService.Usuarios
         public UsuarioAppServico(IUsuarioRepositorio usuarioRepositorio)
         {
             this.usuarioRepositorio = usuarioRepositorio;
+        }
+
+        public void CadastrarUsuario(CadastrarUsuariosRequest request)
+        {
+            throw new NotImplementedException();
         }
 
         public UsuarioResponse RetornaUsuario(int codigoUsuario)

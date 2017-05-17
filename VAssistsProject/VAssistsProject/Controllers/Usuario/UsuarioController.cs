@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using VAssists.AppService.Usuarios.Interfaces;
+using VAssists.DataTransfer.Usuarios.requests;
 using VAssists.DataTransfer.Usuarios.responses;
 
 namespace VAssistsProject.Controllers.Usuario
@@ -38,5 +39,21 @@ namespace VAssistsProject.Controllers.Usuario
         {
             return Ok(usuarioAppServico.RetornaUsuario(codigoUsuario));
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("api/usuario")]
+        [ResponseType(typeof(UsuarioResponse))]
+        public IHttpActionResult CadastrarUsuario([FromBody] CadastrarUsuariosRequest request)
+        {
+            usuarioAppServico.CadastrarUsuario(request);
+            return Ok();
+        }
+
+
     }
 }
