@@ -503,31 +503,6 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="T:VAssistsProject.Controllers.LoginController">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="M:VAssistsProject.Controllers.LoginController.#ctor(VAssists.AppService.Seguranca.Interfaces.ISegurancaAppServico)">
-             <summary>
-            
-             </summary>
-             <param name="segurancaAppServico"></param>
-        </member>
-        <member name="M:VAssistsProject.Controllers.LoginController.LogarNoSistema(VAssists.DataTransfer.Seguranca.requests.LoginSistemaRequest)">
-             <summary>
-            
-             </summary>
-             <param name="request"></param>
-             <returns></returns>
-        </member>
-        <member name="M:VAssistsProject.Controllers.LoginController.DeslogarNoSistema(System.Int32)">
-             <summary>
-            
-             </summary>
-             <param name="codigoUsuario"></param>
-             <returns></returns>
-        </member>
         <member name="M:VAssistsProject.Controllers.Autenticacao.SegurancaController.#ctor(VAssists.AppService.Seguranca.Interfaces.ISegurancaAppServico)">
              <summary>
             
@@ -540,6 +515,26 @@
              </summary>
              <param name="request"></param>
              <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Autenticacao.SegurancaController.LogarNoSistema(VAssists.DataTransfer.Seguranca.requests.LoginSistemaRequest)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Autenticacao.SegurancaController.DeslogarNoSistema(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="codigoUsuario"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Painel.PainelController.#ctor(VAssists.AppService.Painel.Interfaces.IPainelAppServico)">
+            <summary>
+            
+            </summary>
+            <param name="painelAppServico"></param>
         </member>
         <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.#ctor(VAssists.AppService.Pontos.Interfaces.IRegistroPontoAppServico)">
              <summary>

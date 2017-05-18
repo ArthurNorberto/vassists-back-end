@@ -70,6 +70,7 @@
     <Compile Include="Modelo\Resposta.cs" />
     <Compile Include="Modelo\Tipo.cs" />
     <Compile Include="Ninject\DominioResolver.cs" />
+    <Compile Include="Painel\repositorios\IPainelRepositorio.cs" />
     <Compile Include="Pontos\IRegistroPontoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Modelo\Usuario.cs" />

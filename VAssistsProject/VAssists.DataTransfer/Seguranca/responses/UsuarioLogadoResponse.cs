@@ -2,8 +2,8 @@
 {
     public class UsuarioLogadoResponse
     {
-        public string nomeUsuario { get; set; }
-        public long idUsuario { get; set; }
-        public string perfil { get; set; }
+        public string Nome { get; set; }
+        public long Codigo { get; set; }
+        public string Perfil { get; set; }
     }
 }
