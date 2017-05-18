@@ -1,5 +1,4 @@
 ﻿using Ninject.Modules;
-using System;
 
 namespace Domínio.Ninject
 {
@@ -7,7 +6,6 @@ namespace Domínio.Ninject
     {
         public override void Load()
         {
-            
         }
     }
 }

@@ -338,7 +338,7 @@
         </member>
         <member name="M:VAssistsProject.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
             <summary>
-            Gets the sample object that will be serialized by the formatters. 
+            Gets the sample object that will be serialized by the formatters.
             First, it will look at the <see cref="P:VAssistsProject.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
             one using <see cref="M:VAssistsProject.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(VAssistsProject.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:VAssistsProject.Areas.HelpPage.ObjectGenerator"/>) and other
             factories in <see cref="P:VAssistsProject.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
@@ -504,87 +504,87 @@
             <param name="documentPath">The physical path to XML document.</param>
         </member>
         <member name="T:VAssistsProject.Controllers.LoginController">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:VAssistsProject.Controllers.LoginController.#ctor(VAssists.AppService.Seguranca.Interfaces.ISegurancaAppServico)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="segurancaAppServico"></param>
+             </summary>
+             <param name="segurancaAppServico"></param>
         </member>
         <member name="M:VAssistsProject.Controllers.LoginController.LogarNoSistema(VAssists.DataTransfer.Seguranca.requests.LoginSistemaRequest)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
         </member>
         <member name="M:VAssistsProject.Controllers.LoginController.DeslogarNoSistema(System.Int32)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="codigoUsuario"></param>
-            <returns></returns>
+             </summary>
+             <param name="codigoUsuario"></param>
+             <returns></returns>
         </member>
         <member name="M:VAssistsProject.Controllers.Autenticacao.SegurancaController.#ctor(VAssists.AppService.Seguranca.Interfaces.ISegurancaAppServico)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="segurancaAppServico"></param>
+             </summary>
+             <param name="segurancaAppServico"></param>
         </member>
         <member name="M:VAssistsProject.Controllers.Autenticacao.SegurancaController.CadastroSistema(VAssists.DataTransfer.Seguranca.requests.CadastroUsuarioRequest)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
         </member>
         <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.#ctor(VAssists.AppService.Pontos.Interfaces.IRegistroPontoAppServico)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="registroPontoAppServico"></param>
+             </summary>
+             <param name="registroPontoAppServico"></param>
         </member>
         <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.RetornarPonto(System.Int32)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="codigoPonto"></param>
-            <returns></returns>
+             </summary>
+             <param name="codigoPonto"></param>
+             <returns></returns>
         </member>
         <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.RegistrarPonto(VAssists.DataTransfer.Pontos.requests.RegistrarPontoRequest)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
         </member>
         <member name="T:VAssistsProject.Controllers.Usuario.UsuarioController">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:VAssistsProject.Controllers.Usuario.UsuarioController.#ctor(VAssists.AppService.Usuarios.Interfaces.IUsuarioAppServico)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="usuarioAppServico"></param>
+             </summary>
+             <param name="usuarioAppServico"></param>
         </member>
         <member name="M:VAssistsProject.Controllers.Usuario.UsuarioController.RetornaUsuario(System.Int32)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="codigoUsuario"></param>
-            <returns></returns>
+             </summary>
+             <param name="codigoUsuario"></param>
+             <returns></returns>
         </member>
         <member name="M:VAssistsProject.Controllers.Usuario.UsuarioController.CadastrarUsuario(VAssists.DataTransfer.Usuarios.requests.CadastrarUsuariosRequest)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
         </member>
     </members>
 </doc>

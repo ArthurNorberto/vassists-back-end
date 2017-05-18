@@ -60,6 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\Mapeamento\PerfilMap.cs" />
+    <Compile Include="Modelo\Mapeamento\PontoMap.cs" />
+    <Compile Include="Modelo\Mapeamento\RespostaMap.cs" />
+    <Compile Include="Modelo\Mapeamento\TipoMap.cs" />
     <Compile Include="Modelo\Mapeamento\UsuarioMap.cs" />
     <Compile Include="Modelo\Perfil.cs" />
     <Compile Include="Modelo\Ponto.cs" />

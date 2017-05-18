@@ -2,7 +2,7 @@
 using Domínio.Pontos;
 using System;
 
-namespace VAssistsInfra.Pontos
+namespace VAssistsInfra.Pontos.repositorios
 {
     public class RegistroPontoRepositorio : IRegistroPontoRepositorio
     {

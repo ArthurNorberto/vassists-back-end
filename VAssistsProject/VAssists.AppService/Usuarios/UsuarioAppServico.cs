@@ -1,5 +1,5 @@
-﻿using System;
-using Domínio.Usuarios.repositorios;
+﻿using Domínio.Usuarios.repositorios;
+using System;
 using VAssists.AppService.Usuarios.Interfaces;
 using VAssists.DataTransfer.Usuarios.requests;
 using VAssists.DataTransfer.Usuarios.responses;

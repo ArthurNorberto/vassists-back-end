@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Http.Description;
 using VAssists.AppService.Pontos.Interfaces;
 using VAssists.DataTransfer.Pontos.requests;
@@ -16,7 +11,7 @@ namespace VAssistsProject.Controllers.Ponto
         private readonly IRegistroPontoAppServico registroPontoAppServico;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="registroPontoAppServico"></param>
         public RegistroPontoController(IRegistroPontoAppServico registroPontoAppServico)
@@ -25,7 +20,7 @@ namespace VAssistsProject.Controllers.Ponto
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="codigoPonto"></param>
         /// <returns></returns>
@@ -37,9 +32,8 @@ namespace VAssistsProject.Controllers.Ponto
             return Ok(registroPontoAppServico.RetornarPonto(codigoPonto));
         }
 
-
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>

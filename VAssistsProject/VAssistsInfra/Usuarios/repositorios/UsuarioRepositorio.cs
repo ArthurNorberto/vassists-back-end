@@ -3,7 +3,7 @@ using Domínio.Usuarios.repositorios;
 using NHibernate;
 using VAssistsInfra.Conexão;
 
-namespace VAssistsInfra.Usuarios
+namespace VAssistsInfra.Usuarios.repositorios
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
@@ -16,8 +16,6 @@ namespace VAssistsInfra.Usuarios
 
         public Usuario RetornaUsuario(int codigoUsuario)
         {
-            
-
             return new Usuario()
             {
                 IdUsuario = 1,

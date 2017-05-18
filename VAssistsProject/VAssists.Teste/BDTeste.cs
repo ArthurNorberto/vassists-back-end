@@ -50,7 +50,7 @@ namespace VAssists.Teste
         }
 
         [Test]
-        public void TesteDeInsert()
+        public void TesteDeInsertPerfil()
         {
             int atual = 0;
             int resultado = 0;
@@ -60,21 +60,20 @@ namespace VAssists.Teste
                 {
                     try
                     {
-                        atual = session.Query<Usuario>().Count();
+                        atual = session.Query<Perfil>().Count();
 
-                        
-                        var usuario = new Usuario
+                        var perfil = new Perfil
                         {
-                            NomeUsuario = "Arthur",
-                            Email = "arthur@teste.com.br"
+                            NomePerfil = "Administrador",
+                            IdtPerfil = "A"
                         };
 
-                        session.Save(usuario);
+                        session.Save(perfil);
 
                         transaction.Commit();
                         session.Flush();
 
-                        resultado = session.Query<Usuario>().Count();                        
+                        resultado = session.Query<Perfil>().Count();
                     }
                     catch
                     {

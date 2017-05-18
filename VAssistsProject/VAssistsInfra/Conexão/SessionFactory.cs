@@ -20,7 +20,7 @@ namespace VAssistsInfra.Conexão
                     _factory = Fluently.Configure()
                     .Database(MySQLConfiguration.Standard.ConnectionString(connectionString))
                     .Mappings(m => m.FluentMappings.AddFromAssemblyOf<UsuarioMap>())
-                    .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(false, true)).BuildSessionFactory();
+                    .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(false, false)).BuildSessionFactory();
                 }
 
                 return _factory;

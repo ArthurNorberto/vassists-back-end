@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Http.Description;
 using VAssists.AppService.Usuarios.Interfaces;
 using VAssists.DataTransfer.Usuarios.requests;
@@ -12,14 +7,14 @@ using VAssists.DataTransfer.Usuarios.responses;
 namespace VAssistsProject.Controllers.Usuario
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class UsuarioController : ApiController
     {
         private readonly IUsuarioAppServico usuarioAppServico;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="usuarioAppServico"></param>
         public UsuarioController(IUsuarioAppServico usuarioAppServico)
@@ -28,7 +23,7 @@ namespace VAssistsProject.Controllers.Usuario
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="codigoUsuario"></param>
         /// <returns></returns>
@@ -41,7 +36,7 @@ namespace VAssistsProject.Controllers.Usuario
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -53,7 +48,5 @@ namespace VAssistsProject.Controllers.Usuario
             usuarioAppServico.CadastrarUsuario(request);
             return Ok();
         }
-
-
     }
 }

@@ -12,6 +12,5 @@ namespace Domínio.Modelo
         public virtual decimal Longitude { get; set; }
         public virtual Usuario Usuario { get; set; }
         public virtual Tipo Tipo { get; set; }
-
     }
 }

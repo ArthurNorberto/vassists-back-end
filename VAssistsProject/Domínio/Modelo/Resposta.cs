@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domínio.Modelo
 {
@@ -10,6 +6,7 @@ namespace Domínio.Modelo
     {
         public virtual int IdResposta { get; set; }
         public virtual DateTime DataResposta { get; set; }
+        public virtual string Texto { get; set; }
         public virtual Ponto Ponto { get; set; }
         public virtual Usuario Usuario { get; set; }
     }

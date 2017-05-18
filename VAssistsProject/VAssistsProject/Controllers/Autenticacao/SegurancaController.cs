@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using VAssists.AppService.Seguranca.Interfaces;
 using VAssists.DataTransfer.Seguranca.requests;
 
@@ -14,7 +9,7 @@ namespace VAssistsProject.Controllers.Autenticacao
         private readonly ISegurancaAppServico segurancaAppServico;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="segurancaAppServico"></param>
         public SegurancaController(ISegurancaAppServico segurancaAppServico)
@@ -23,7 +18,7 @@ namespace VAssistsProject.Controllers.Autenticacao
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>

@@ -1,6 +1,5 @@
-﻿using Ninject.Modules;
-using Ninject.Extensions.Conventions;
-using System;
+﻿using Ninject.Extensions.Conventions;
+using Ninject.Modules;
 using VAssists.AppService.Seguranca;
 using VAssistsInfra.Seguranca.repositorios;
 

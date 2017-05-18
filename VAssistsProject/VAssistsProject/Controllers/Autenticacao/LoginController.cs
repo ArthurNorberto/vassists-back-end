@@ -4,18 +4,17 @@ using VAssists.AppService.Seguranca.Interfaces;
 using VAssists.DataTransfer.Seguranca.requests;
 using VAssists.DataTransfer.Seguranca.responses;
 
-
 namespace VAssistsProject.Controllers
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class LoginController : ApiController
     {
         private readonly ISegurancaAppServico segurancaAppServico;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="segurancaAppServico"></param>
         public LoginController(ISegurancaAppServico segurancaAppServico)
@@ -24,7 +23,7 @@ namespace VAssistsProject.Controllers
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -37,7 +36,7 @@ namespace VAssistsProject.Controllers
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="codigoUsuario"></param>
         /// <returns></returns>

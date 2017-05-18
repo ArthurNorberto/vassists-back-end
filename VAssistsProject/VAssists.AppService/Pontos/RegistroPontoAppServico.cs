@@ -1,12 +1,7 @@
 ﻿using Domínio.Pontos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VAssists.AppService.Pontos.Interfaces;
-using VAssists.DataTransfer.Pontos.responses;
 using VAssists.DataTransfer.Pontos.requests;
+using VAssists.DataTransfer.Pontos.responses;
 
 namespace VAssists.AppService.Pontos
 {
@@ -35,7 +30,6 @@ namespace VAssists.AppService.Pontos
             };
 
             return response;
-            
         }
     }
 }
