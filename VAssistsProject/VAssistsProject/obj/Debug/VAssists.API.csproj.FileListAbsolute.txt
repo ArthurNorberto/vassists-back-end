@@ -214,7 +214,7 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\SwaggerDemoApi.XML
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsProject.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsProject.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Antlr3.Runtime.dll
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Domínio.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Dominio.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\EntityFramework.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\EntityFramework.SqlServer.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.dll
@@ -274,8 +274,7 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.dl
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.DataTransfer.pdb
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Domínio.pdb
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Domínio.dll.config
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Dominio.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Antlr3.Runtime.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.DependencyCollector.xml
