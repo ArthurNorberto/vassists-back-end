@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Domínio.Modelo
+namespace VDominio.Modelo
 {
     public class Resposta
     {

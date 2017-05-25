@@ -1,4 +1,4 @@
-﻿using Domínio.Pontos;
+﻿using VDominio.Pontos;
 using VAssists.AppService.Pontos.Interfaces;
 using VAssists.DataTransfer.Pontos.requests;
 using VAssists.DataTransfer.Pontos.responses;

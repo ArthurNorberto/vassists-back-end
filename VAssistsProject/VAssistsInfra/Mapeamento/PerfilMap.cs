@@ -1,6 +1,7 @@
-﻿using FluentNHibernate.Mapping;
+﻿using VDominio.Modelo;
+using FluentNHibernate.Mapping;
 
-namespace Domínio.Modelo.Mapeamento
+namespace VAssistsInfra.Modelo.Mapeamento
 {
     public class PerfilMap : ClassMap<Perfil>
     {

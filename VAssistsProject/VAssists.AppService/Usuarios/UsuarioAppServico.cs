@@ -1,4 +1,4 @@
-﻿using Domínio.Usuarios.repositorios;
+﻿using VDominio.Usuarios.repositorios;
 using System;
 using VAssists.AppService.Usuarios.Interfaces;
 using VAssists.DataTransfer.Usuarios.requests;

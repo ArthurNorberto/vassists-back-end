@@ -1,4 +1,4 @@
-﻿using Domínio.Modelo;
+﻿using VDominio.Modelo;
 using MySql.Data.MySqlClient;
 using NHibernate;
 using NHibernate.Linq;
@@ -6,7 +6,7 @@ using NUnit.Framework;
 using System;
 using System.Data;
 using System.Linq;
-using VAssistsInfra.Conexão;
+using VAssistsInfra.Conexao;
 
 namespace VAssists.Teste
 {

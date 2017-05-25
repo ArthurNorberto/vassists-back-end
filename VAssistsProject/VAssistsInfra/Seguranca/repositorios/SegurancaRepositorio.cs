@@ -1,12 +1,12 @@
-﻿using Domínio.Modelo;
-using Domínio.Seguranca.repositorios;
+﻿using VDominio.Modelo;
+using VDominio.Seguranca.repositorios;
 using NHibernate;
 using NHibernate.Linq;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using VAssistsInfra.Auxiliares;
-using VAssistsInfra.Conexão;
+using VAssistsInfra.Conexao;
 
 namespace VAssistsInfra.Seguranca.repositorios
 {

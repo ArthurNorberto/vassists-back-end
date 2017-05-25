@@ -37,7 +37,6 @@
   <ItemGroup>
     <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
@@ -76,9 +75,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domínio\VAssists.Domínio.csproj">
+    <ProjectReference Include="..\Domínio\VAssists.Dominio.csproj">
       <Project>{78f834c6-18d5-4282-80a5-c56e012e1b71}</Project>
-      <Name>VAssists.Domínio</Name>
+      <Name>VAssists.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\VAssistsInfra\VAssists.Infra.csproj">
       <Project>{a9a5b9f8-03bc-423a-9909-c1c1b7249df9}</Project>

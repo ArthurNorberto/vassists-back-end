@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
@@ -59,7 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auxiliares\ConfigMD5.cs" />
-    <Compile Include="Conexão\SessionFactory.cs" />
+    <Compile Include="Conexoes\SessionFactory.cs" />
+    <Compile Include="Mapeamento\PerfilMap.cs" />
+    <Compile Include="Mapeamento\PontoMap.cs" />
+    <Compile Include="Mapeamento\RespostaMap.cs" />
+    <Compile Include="Mapeamento\TipoMap.cs" />
+    <Compile Include="Mapeamento\UsuarioMap.cs" />
     <Compile Include="Painel\repositorios\PainelRepositorio.cs" />
     <Compile Include="Pontos\repositorios\RegistroPontoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,16 +71,15 @@
     <Compile Include="Usuarios\repositorios\UsuarioRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domínio\VAssists.Domínio.csproj">
-      <Project>{78f834c6-18d5-4282-80a5-c56e012e1b71}</Project>
-      <Name>VAssists.Domínio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Domínio\VAssists.Dominio.csproj">
+      <Project>{78f834c6-18d5-4282-80a5-c56e012e1b71}</Project>
+      <Name>VAssists.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

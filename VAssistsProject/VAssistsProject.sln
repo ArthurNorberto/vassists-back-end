@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.API", "VAssistsProject\VAssists.API.csproj", "{54398562-AD68-4471-9C1D-316E2BB42CF8}"
 EndProject
@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.Infra", "VAssistsI
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{3BBD65DB-9C6F-48F8-AB9E-6322ACB4A559}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.Aplicação", "VAssists.AppService\VAssists.Aplicação.csproj", "{4FE90ABF-0100-4CBC-A5CB-B032B3CE6301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.Aplicacao", "VAssists.AppService\VAssists.Aplicacao.csproj", "{4FE90ABF-0100-4CBC-A5CB-B032B3CE6301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.Domínio", "Domínio\VAssists.Domínio.csproj", "{78F834C6-18D5-4282-80A5-C56E012E1B71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.Dominio", "Domínio\VAssists.Dominio.csproj", "{78F834C6-18D5-4282-80A5-C56E012E1B71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAssists.DataTransfer", "VAssists.DataTransfer\VAssists.DataTransfer.csproj", "{FF9AD128-B8AE-4B24-8B3E-1FB434F90606}"
 EndProject

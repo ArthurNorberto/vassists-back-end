@@ -1,6 +1,6 @@
 ﻿using Ninject.Modules;
 
-namespace Domínio.Ninject
+namespace VDominio.Ninject
 {
     public class DominioResolver : NinjectModule
     {
