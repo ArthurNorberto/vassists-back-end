@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VAssists.DataTransfer.Painel.requests;
 using VAssists.DataTransfer.Painel.responses;
 
 namespace VAssists.AppService.Painel.Interfaces
@@ -10,5 +11,6 @@ namespace VAssists.AppService.Painel.Interfaces
     public interface IPainelAppServico
     {
         IEnumerable<PerfilResponse> ListarPerfil();
+        void InserirPerfil(InserirPainelRequest request);
     }
 }

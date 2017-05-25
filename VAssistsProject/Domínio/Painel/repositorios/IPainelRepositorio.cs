@@ -10,5 +10,6 @@ namespace VDominio.Painel.repositorios
     public interface IPainelRepositorio
     {
         IEnumerable<Perfil> ListarPerfil();
+        void InserirPerfil(string descricao, string identificao);
     }
 }

@@ -20,6 +20,17 @@ namespace VAssistsInfra.Painel.repositorios
             session = SessionFactory.OpenSession();
         }
 
+        public void InserirPerfil(string descricao, string identificao)
+        {
+            Perfil painel = new Perfil
+            {
+               NomePerfil = descricao,
+               IdtPerfil = identificao
+            };
+
+            session.Save(painel);
+        }
+
         public IEnumerable<Perfil> ListarPerfil()
         {
             return session.Query<Perfil>();

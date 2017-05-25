@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Painel\requests\InserirPainelRequest.cs" />
     <Compile Include="Painel\responses\PerfilResponse.cs" />
     <Compile Include="Pontos\requests\RegistrarPontoRequest.cs" />
     <Compile Include="Pontos\responses\PontoResponse.cs" />
@@ -50,9 +51,7 @@
     <Compile Include="Usuarios\requests\CadastrarUsuariosRequest.cs" />
     <Compile Include="Usuarios\responses\UsuarioResponse.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Painel\requests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
