@@ -33,7 +33,6 @@ C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\MySql.Data.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\NHibernate.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\nunit.framework.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\VAssistsInfra.dll
-C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\Ninject.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\Domínio.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\Domínio.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\VAssistsInfra.pdb
@@ -44,7 +43,6 @@ C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\Iesi.Collectio
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\MySql.Data.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\NHibernate.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\nunit.framework.xml
-C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\Ninject.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\bin\Debug\pt-BR\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\obj\Debug\VAssists.Teste.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Teste\obj\Debug\VAssists.Teste.dll
