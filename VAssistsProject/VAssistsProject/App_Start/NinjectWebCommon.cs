@@ -11,7 +11,7 @@ namespace VAssistsProject.App_Start
     using System.Collections.Generic;
     using System.Web;
     using VAssists.AppService.Ninject;
-    using VDominio.Ninject;
+ 
 
     public static class NinjectWebCommon
     {
@@ -43,8 +43,7 @@ namespace VAssistsProject.App_Start
         {
             var kernel = new StandardKernel();
             var modules = new List<INinjectModule> {
-                new AplicacaoResolver(),
-                new DominioResolver()
+                new AplicacaoResolver()
             };
 
             try

@@ -11,6 +11,9 @@ using VAssists.DataTransfer.Painel.responses;
 
 namespace VAssistsProject.Controllers.Painel
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class PainelController : ApiController
     {
         private readonly IPainelAppServico painelAppServico;

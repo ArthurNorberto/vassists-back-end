@@ -530,6 +530,11 @@
              <param name="codigoUsuario"></param>
              <returns></returns>
         </member>
+        <member name="T:VAssistsProject.Controllers.Painel.PainelController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:VAssistsProject.Controllers.Painel.PainelController.#ctor(VAssists.AppService.Painel.Interfaces.IPainelAppServico)">
             <summary>
             
