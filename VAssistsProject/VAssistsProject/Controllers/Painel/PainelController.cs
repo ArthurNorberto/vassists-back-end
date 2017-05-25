@@ -39,6 +39,7 @@ namespace VAssistsProject.Controllers.Painel
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="request"></param>
         /// <returns></returns>
         [HttpPost]
         [Route("api/perfil")]
@@ -47,5 +48,33 @@ namespace VAssistsProject.Controllers.Painel
             painelAppServico.InserirPerfil(request);
             return Ok();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/tipo")]
+        [ResponseType(typeof(IEnumerable<TipoResponse>))]
+        public IHttpActionResult ListarTipo()
+        {
+            return Ok(painelAppServico.ListarTipo());
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("api/tipo")]
+        public IHttpActionResult InserirTipo([FromBody] InserirTipoRequest request)
+        {
+            painelAppServico.InserirTipo(request);
+            return Ok();
+        }
+
+
+
     }
 }

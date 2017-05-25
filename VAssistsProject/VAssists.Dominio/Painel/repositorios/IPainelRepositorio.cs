@@ -11,5 +11,7 @@ namespace VDominio.Painel.repositorios
     {
         IEnumerable<Perfil> ListarPerfil();
         void InserirPerfil(string descricao, string identificao);
+        IEnumerable<Tipo> ListarTipo();
+        void InserirTipo(string descricao, string identificao);
     }
 }

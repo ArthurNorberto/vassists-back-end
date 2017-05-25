@@ -22,15 +22,29 @@ namespace VAssists.AppService.Painel
             painelRepositorio.InserirPerfil(request.Descricao, request.Identificao);
         }
 
+        public void InserirTipo(InserirTipoRequest request)
+        {
+            painelRepositorio.InserirTipo(request.Descricao, request.Identificao);
+        }
+
         public IEnumerable<PerfilResponse> ListarPerfil()
         {
             return painelRepositorio.ListarPerfil().Select(x => new PerfilResponse
-                {
-                    Codigo = x.IdPerfil,
-                    Descricao = x.NomePerfil,
-                    IDTPerfil = x.IdtPerfil
-                }
-            );
+            {
+                Codigo = x.IdPerfil,
+                Descricao = x.NomePerfil,
+                IDTPerfil = x.IdtPerfil
+            });
+        }
+
+        public IEnumerable<TipoResponse> ListarTipo()
+        {
+            return painelRepositorio.ListarTipo().Select(x => new TipoResponse
+            {
+                Codigo = x.IdTipo,
+                Descricao = x.NomeTipo,
+                IDTTipo = x.IdtTipo
+            });
         }
     }
 }

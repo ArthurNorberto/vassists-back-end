@@ -10,3 +10,15 @@ C:\Git\vassists-back-end\VAssistsProject\Domínio\bin\Debug\Ninject.Extensions.C
 C:\Git\vassists-back-end\VAssistsProject\Domínio\obj\Debug\VAssists.Dominio.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\Domínio\obj\Debug\Domínio.dll
 C:\Git\vassists-back-end\VAssistsProject\Domínio\obj\Debug\Domínio.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Domínio.dll.config
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Domínio.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Domínio.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Iesi.Collections.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Ninject.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Ninject.Extensions.Conventions.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Iesi.Collections.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Ninject.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Ninject.Extensions.Conventions.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Debug\VAssists.Dominio.csprojResolveAssemblyReference.cache
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Debug\Domínio.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Debug\Domínio.pdb

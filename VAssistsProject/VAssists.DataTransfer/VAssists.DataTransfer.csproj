@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Painel\requests\InserirPainelRequest.cs" />
+    <Compile Include="Painel\requests\InserirTipoRequest.cs" />
     <Compile Include="Painel\responses\PerfilResponse.cs" />
+    <Compile Include="Painel\responses\TipoResponse.cs" />
     <Compile Include="Pontos\requests\RegistrarPontoRequest.cs" />
     <Compile Include="Pontos\responses\PontoResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

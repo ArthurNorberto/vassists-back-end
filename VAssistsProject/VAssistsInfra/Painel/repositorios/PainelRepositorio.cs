@@ -22,18 +22,34 @@ namespace VAssistsInfra.Painel.repositorios
 
         public void InserirPerfil(string descricao, string identificao)
         {
-            Perfil painel = new Perfil
+            Perfil perfil = new Perfil
             {
                NomePerfil = descricao,
                IdtPerfil = identificao
             };
 
-            session.Save(painel);
+            session.Save(perfil);
+        }
+
+        public void InserirTipo(string descricao, string identificao)
+        {
+            Tipo tipo = new Tipo
+            {
+                NomeTipo = descricao,
+                IdtTipo = identificao
+            };
+
+            session.Save(tipo);
         }
 
         public IEnumerable<Perfil> ListarPerfil()
         {
             return session.Query<Perfil>();
+        }
+
+        public IEnumerable<Tipo> ListarTipo()
+        {
+            return session.Query<Tipo>();
         }
     }
 }
