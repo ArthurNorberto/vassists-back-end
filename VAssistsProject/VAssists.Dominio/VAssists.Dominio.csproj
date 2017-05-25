@@ -7,8 +7,8 @@
     <ProjectGuid>{78F834C6-18D5-4282-80A5-C56E012E1B71}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Domínio</RootNamespace>
-    <AssemblyName>Domínio</AssemblyName>
+    <RootNamespace>Dominio</RootNamespace>
+    <AssemblyName>Dominio</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,9 +50,6 @@
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Seguranca\repositorios\ISegurancaRepositorio.cs" />
     <Compile Include="Usuarios\repositorios\IUsuarioRepositorio.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
