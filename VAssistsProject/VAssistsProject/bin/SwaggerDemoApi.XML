@@ -536,6 +536,18 @@
             </summary>
             <param name="painelAppServico"></param>
         </member>
+        <member name="M:VAssistsProject.Controllers.Painel.PainelController.ListarPerfil">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Painel.PainelController.InserirPerfil(VAssists.DataTransfer.Painel.requests.InserirPainelRequest)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.#ctor(VAssists.AppService.Pontos.Interfaces.IRegistroPontoAppServico)">
              <summary>
             

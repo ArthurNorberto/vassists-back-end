@@ -398,10 +398,6 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domínio\VAssists.Dominio.csproj">
-      <Project>{78f834c6-18d5-4282-80a5-c56e012e1b71}</Project>
-      <Name>VAssists.Dominio</Name>
-    </ProjectReference>
     <ProjectReference Include="..\VAssists.AppService\VAssists.Aplicacao.csproj">
       <Project>{4fe90abf-0100-4cbc-a5cb-b032b3ce6301}</Project>
       <Name>VAssists.Aplicacao</Name>
@@ -409,6 +405,10 @@
     <ProjectReference Include="..\VAssists.DataTransfer\VAssists.DataTransfer.csproj">
       <Project>{ff9ad128-b8ae-4b24-8b3e-1fb434f90606}</Project>
       <Name>VAssists.DataTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VAssists.Dominio\VAssists.Dominio.csproj">
+      <Project>{78f834c6-18d5-4282-80a5-c56e012e1b71}</Project>
+      <Name>VAssists.Dominio</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
