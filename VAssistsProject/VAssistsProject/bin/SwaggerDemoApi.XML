@@ -546,6 +546,20 @@
             <summary>
             
             </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Painel.PainelController.ListarTipo">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VAssistsProject.Controllers.Painel.PainelController.InserirTipo(VAssists.DataTransfer.Painel.requests.InserirTipoRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:VAssistsProject.Controllers.Ponto.RegistroPontoController.#ctor(VAssists.AppService.Pontos.Interfaces.IRegistroPontoAppServico)">

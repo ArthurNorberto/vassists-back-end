@@ -12,5 +12,7 @@ namespace VAssists.AppService.Painel.Interfaces
     {
         IEnumerable<PerfilResponse> ListarPerfil();
         void InserirPerfil(InserirPainelRequest request);
+        IEnumerable<TipoResponse> ListarTipo();
+        void InserirTipo(InserirTipoRequest request);
     }
 }
