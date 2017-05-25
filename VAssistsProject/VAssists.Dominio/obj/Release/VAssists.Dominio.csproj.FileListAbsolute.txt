@@ -1,0 +1,5 @@
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Release\Dominio.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Release\Dominio.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Release\VAssists.Dominio.csprojResolveAssemblyReference.cache
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Release\Dominio.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Release\Dominio.pdb

@@ -1,0 +1,17 @@
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\VAssistsInfra.dll.config
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\VAssistsInfra.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\VAssistsInfra.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\Dominio.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\FluentNHibernate.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\Iesi.Collections.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\MySql.Data.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\NHibernate.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\Dominio.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\FluentNHibernate.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\FluentNHibernate.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\Iesi.Collections.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\MySql.Data.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Release\NHibernate.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\obj\Release\VAssists.Infra.csprojResolveAssemblyReference.cache
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\obj\Release\VAssistsInfra.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\obj\Release\VAssistsInfra.pdb

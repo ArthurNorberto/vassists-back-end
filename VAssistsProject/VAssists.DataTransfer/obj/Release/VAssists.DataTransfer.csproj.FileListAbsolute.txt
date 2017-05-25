@@ -1,0 +1,5 @@
+C:\Git\vassists-back-end\VAssistsProject\VAssists.DataTransfer\bin\Release\VAssists.DataTransfer.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.DataTransfer\bin\Release\VAssists.DataTransfer.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssists.DataTransfer\obj\Release\VAssists.DataTransfer.csprojResolveAssemblyReference.cache
+C:\Git\vassists-back-end\VAssistsProject\VAssists.DataTransfer\obj\Release\VAssists.DataTransfer.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.DataTransfer\obj\Release\VAssists.DataTransfer.pdb

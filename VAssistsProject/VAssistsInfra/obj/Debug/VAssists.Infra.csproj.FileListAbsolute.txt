@@ -17,6 +17,7 @@ C:\Git\back-end\VAssistsProject\VAssistsInfra\bin\Debug\Ninject.xml
 C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssists.Infra.csprojResolveAssemblyReference.cache
 C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.dll
 C:\Git\back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssists.Infra.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Debug\VAssistsInfra.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Debug\VAssistsInfra.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Debug\VAssistsInfra.pdb
@@ -31,6 +32,5 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Debug\FluentNHibernat
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Debug\Iesi.Collections.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Debug\MySql.Data.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\bin\Debug\NHibernate.xml
-C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssists.Infra.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsInfra\obj\Debug\VAssistsInfra.pdb
