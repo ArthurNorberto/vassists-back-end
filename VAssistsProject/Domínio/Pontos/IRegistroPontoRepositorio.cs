@@ -1,6 +1,8 @@
-﻿using Domínio.Modelo;
+﻿
 
-namespace Domínio.Pontos
+using VDominio.Modelo;
+
+namespace VDominio.Pontos
 {
     public interface IRegistroPontoRepositorio
     {

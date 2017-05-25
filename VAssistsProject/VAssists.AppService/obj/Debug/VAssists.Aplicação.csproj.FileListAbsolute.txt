@@ -21,3 +21,4 @@ C:\Git\back-end\VAssistsProject\VAssists.AppService\bin\Debug\Iesi.Collections.x
 C:\Git\back-end\VAssistsProject\VAssists.AppService\obj\Debug\VAssists.Aplicação.csprojResolveAssemblyReference.cache
 C:\Git\back-end\VAssistsProject\VAssists.AppService\obj\Debug\VAssists.AppService.dll
 C:\Git\back-end\VAssistsProject\VAssists.AppService\obj\Debug\VAssists.AppService.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\obj\Debug\VAssists.Aplicação.csprojResolveAssemblyReference.cache

@@ -1,7 +1,7 @@
-﻿using Domínio.Modelo;
-using Domínio.Usuarios.repositorios;
+﻿using VDominio.Modelo;
+using VDominio.Usuarios.repositorios;
 using NHibernate;
-using VAssistsInfra.Conexão;
+using VAssistsInfra.Conexao;
 
 namespace VAssistsInfra.Usuarios.repositorios
 {

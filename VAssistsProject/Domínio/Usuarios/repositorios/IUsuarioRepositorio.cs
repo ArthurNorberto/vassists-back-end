@@ -1,6 +1,6 @@
-﻿using Domínio.Modelo;
+﻿using VDominio.Modelo;
 
-namespace Domínio.Usuarios.repositorios
+namespace VDominio.Usuarios.repositorios
 {
     public interface IUsuarioRepositorio
     {

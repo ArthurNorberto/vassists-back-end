@@ -3,7 +3,6 @@
 
 namespace VAssistsProject.App_Start
 {
-    using Domínio.Ninject;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Modules;
@@ -12,6 +11,7 @@ namespace VAssistsProject.App_Start
     using System.Collections.Generic;
     using System.Web;
     using VAssists.AppService.Ninject;
+    using VDominio.Ninject;
 
     public static class NinjectWebCommon
     {

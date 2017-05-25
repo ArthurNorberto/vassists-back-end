@@ -1,5 +1,5 @@
-﻿using Domínio.Modelo;
-using Domínio.Pontos;
+﻿using VDominio.Modelo;
+using VDominio.Pontos;
 using System;
 
 namespace VAssistsInfra.Pontos.repositorios

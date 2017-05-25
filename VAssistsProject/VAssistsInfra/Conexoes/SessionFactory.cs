@@ -1,10 +1,10 @@
-﻿using Domínio.Modelo.Mapeamento;
-using FluentNHibernate.Cfg;
+﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
+using VAssistsInfra.Modelo.Mapeamento;
 
-namespace VAssistsInfra.Conexão
+namespace VAssistsInfra.Conexao
 {
     public static class SessionFactory
     {

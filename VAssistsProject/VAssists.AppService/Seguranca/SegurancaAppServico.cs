@@ -1,8 +1,8 @@
-﻿using Domínio.Seguranca.repositorios;
-using System;
+﻿using System;
 using VAssists.AppService.Seguranca.Interfaces;
 using VAssists.DataTransfer.Seguranca.requests;
 using VAssists.DataTransfer.Seguranca.responses;
+using VDominio.Seguranca.repositorios;
 
 namespace VAssists.AppService.Seguranca
 {

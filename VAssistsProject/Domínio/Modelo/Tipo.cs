@@ -1,4 +1,4 @@
-﻿namespace Domínio.Modelo
+﻿namespace VDominio.Modelo
 {
     public class Tipo
     {

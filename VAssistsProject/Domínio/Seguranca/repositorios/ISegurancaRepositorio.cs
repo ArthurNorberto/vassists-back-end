@@ -1,6 +1,6 @@
-﻿using Domínio.Modelo;
+﻿using VDominio.Modelo;
 
-namespace Domínio.Seguranca.repositorios
+namespace VDominio.Seguranca.repositorios
 {
     public interface ISegurancaRepositorio
     {

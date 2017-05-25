@@ -1,13 +1,13 @@
-﻿using Domínio.Painel.repositorios;
-using NHibernate;
+﻿using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VAssistsInfra.Conexão;
-using Domínio.Modelo;
+using VAssistsInfra.Conexao;
 using NHibernate.Linq;
+using VDominio.Painel.repositorios;
+using VDominio.Modelo;
 
 namespace VAssistsInfra.Painel.repositorios
 {

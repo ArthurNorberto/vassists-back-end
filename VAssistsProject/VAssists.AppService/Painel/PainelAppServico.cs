@@ -1,4 +1,4 @@
-﻿using Domínio.Painel.repositorios;
+﻿using VDominio.Painel.repositorios;
 using System.Collections.Generic;
 using System.Linq;
 using VAssists.AppService.Painel.Interfaces;
