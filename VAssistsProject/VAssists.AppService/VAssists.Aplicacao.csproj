@@ -60,7 +60,7 @@
     <Compile Include="Usuarios\UsuarioAppServico.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domínio\VAssists.Dominio.csproj">
+    <ProjectReference Include="..\VAssists.Dominio\VAssists.Dominio.csproj">
       <Project>{78f834c6-18d5-4282-80a5-c56e012e1b71}</Project>
       <Name>VAssists.Dominio</Name>
     </ProjectReference>

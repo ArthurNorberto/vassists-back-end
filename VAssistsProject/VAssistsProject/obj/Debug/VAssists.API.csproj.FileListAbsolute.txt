@@ -271,11 +271,11 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Ninject.Extensions.
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\NHibernate.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.dll
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Domínio.pdb
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Domínio.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.DataTransfer.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Domínio.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Domínio.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Antlr3.Runtime.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.DependencyCollector.xml
