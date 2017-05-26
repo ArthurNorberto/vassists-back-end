@@ -217,7 +217,6 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Antlr3.Runtime.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Dominio.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\EntityFramework.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\EntityFramework.SqlServer.dll
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.DependencyCollector.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -271,12 +270,12 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Ninject.Extensions.
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\NHibernate.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.DataTransfer.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Dominio.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Antlr3.Runtime.pdb
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.DependencyCollector.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.AI.Web.xml
@@ -321,6 +320,7 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.dll.c
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\NHibernate.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssists.API.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsProject.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsProject.pdb
