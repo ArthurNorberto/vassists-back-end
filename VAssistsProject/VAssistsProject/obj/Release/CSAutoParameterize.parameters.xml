@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Producao-Web.config Connection String" description="Producao A Cadeia de Conexão usada em web.config pelo aplicativo para acessar o banco de dados." defaultValue="Server=localhost;Database=producao;Uid=root;Pwd=root;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Git\\vassists-back-end\\VAssistsProject\\VAssistsProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Producao']/@connectionString" />
+  </parameter>
+</parameters>
