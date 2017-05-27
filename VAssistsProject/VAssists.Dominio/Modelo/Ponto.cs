@@ -6,7 +6,7 @@ namespace VDominio.Modelo
     {
         public virtual int IdPonto { get; set; }
         public virtual DateTime DataCadastrado { get; set; }
-        public virtual DateTime DataResponsido { get; set; }
+        public virtual DateTime DataRespondido { get; set; }
         public virtual string Observacao { get; set; }
         public virtual decimal Latitude { get; set; }
         public virtual decimal Longitude { get; set; }

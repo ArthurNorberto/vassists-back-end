@@ -11,8 +11,14 @@ namespace VAssists.AppService.Painel.Interfaces
     public interface IPainelAppServico
     {
         IEnumerable<PerfilResponse> ListarPerfil();
-        void InserirPerfil(InserirPainelRequest request);
+        void InserirPerfil(InserirPerfilRequest request);
         IEnumerable<TipoResponse> ListarTipo();
         void InserirTipo(InserirTipoRequest request);
+        void AlterarPerfil(int codigoPerfil, AlterarPerfilRequest request);
+        void DeletarPerfil(int codigoPerfil);
+        void AlterarTipo(int codigoTipo, AlterarTipoRequest request);
+        void DeletarTipo(int codigoTipo);
+        PerfilResponse RetornarPerfil(int codigoPerfil);
+        TipoResponse RetornarTipo(int codigoTipo);
     }
 }

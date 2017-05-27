@@ -8,5 +8,6 @@ namespace VAssists.AppService.Pontos.Interfaces
         PontoResponse RetornarPonto(int codigo);
 
         void RegistrarPonto(RegistrarPontoRequest request);
+        void DeletarPonto(int codigoPonto);
     }
 }

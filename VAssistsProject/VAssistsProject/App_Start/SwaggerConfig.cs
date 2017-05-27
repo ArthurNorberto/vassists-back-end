@@ -20,6 +20,8 @@ namespace VAssistsProject
                         c.IncludeXmlComments(string.Format(@"{0}\bin\SwaggerDemoApi.XML",
                             System.AppDomain.CurrentDomain.BaseDirectory));
                         c.DescribeAllEnumsAsStrings();
+
+
                     })
                 .EnableSwaggerUi(c =>
                     {

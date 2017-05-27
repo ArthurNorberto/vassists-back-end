@@ -3,6 +3,7 @@ using System;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace VAssistsProject
 {
@@ -31,6 +32,10 @@ namespace VAssistsProject
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

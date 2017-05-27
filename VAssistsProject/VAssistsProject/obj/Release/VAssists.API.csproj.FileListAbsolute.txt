@@ -161,3 +161,8 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.xm
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Release\VAssists.API.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Release\VAssistsProject.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Release\VAssistsProject.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\SwaggerDemoApi.XML
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Cors.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Cors.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Cors.xml
