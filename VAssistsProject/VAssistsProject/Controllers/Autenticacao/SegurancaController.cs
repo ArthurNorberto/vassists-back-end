@@ -6,24 +6,18 @@ using VAssists.DataTransfer.Seguranca.responses;
 
 namespace VAssistsProject.Controllers.Autenticacao
 {
+
     public class SegurancaController : ApiController
     {
         private readonly ISegurancaAppServico segurancaAppServico;
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="segurancaAppServico"></param>
+ 
         public SegurancaController(ISegurancaAppServico segurancaAppServico)
         {
             this.segurancaAppServico = segurancaAppServico;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
+
         [HttpPost]
         [Route("api/seguranca/cadastro")]
         public IHttpActionResult CadastroSistema([FromBody] CadastroUsuarioRequest request)
@@ -32,11 +26,7 @@ namespace VAssistsProject.Controllers.Autenticacao
             return Ok();
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
+
         [HttpPost]
         [Route("api/seguranca/login")]
         [ResponseType(typeof(UsuarioLogadoResponse))]
@@ -45,11 +35,7 @@ namespace VAssistsProject.Controllers.Autenticacao
             return Ok(segurancaAppServico.LogarNoSistema(request));
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="codigoUsuario"></param>
-        /// <returns></returns>
+
         [HttpDelete]
         [Route("api/seguranca/login")]
         public IHttpActionResult DeslogarNoSistema([FromBody] int codigoUsuario)

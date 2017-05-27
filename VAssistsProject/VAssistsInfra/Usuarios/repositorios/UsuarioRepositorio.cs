@@ -2,6 +2,8 @@
 using VDominio.Usuarios.repositorios;
 using NHibernate;
 using VAssistsInfra.Conexao;
+using NHibernate.Linq;
+using System.Linq;
 
 namespace VAssistsInfra.Usuarios.repositorios
 {
@@ -16,11 +18,9 @@ namespace VAssistsInfra.Usuarios.repositorios
 
         public Usuario RetornaUsuario(int codigoUsuario)
         {
-            return new Usuario()
-            {
-                IdUsuario = 1,
-                NomeUsuario = "Arthur"
-            };
+            var usuario = session.Query<Usuario>().Where<Usuario>(x => x.IdUsuario == codigoUsuario).FirstOrDefault();
+
+            return usuario;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace VAssistsInfra.Modelo.Mapeamento
 
             Map(x => x.DataCadastrado).Not.Nullable();
 
-            Map(x => x.DataResponsido).Not.Nullable();
+            Map(x => x.DataRespondido);
 
             Map(x => x.Latitude).Not.Nullable();
 

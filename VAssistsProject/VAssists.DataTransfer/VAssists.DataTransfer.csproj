@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Painel\requests\InserirPainelRequest.cs" />
+    <Compile Include="Painel\requests\AlterarPerfilRequest.cs" />
+    <Compile Include="Painel\requests\AlterarTipoRequest.cs" />
+    <Compile Include="Painel\requests\InserirPerfilRequest.cs" />
     <Compile Include="Painel\requests\InserirTipoRequest.cs" />
     <Compile Include="Painel\responses\PerfilResponse.cs" />
     <Compile Include="Painel\responses\TipoResponse.cs" />

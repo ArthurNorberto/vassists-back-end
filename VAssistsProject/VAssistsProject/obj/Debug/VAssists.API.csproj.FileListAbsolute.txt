@@ -237,6 +237,7 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Secu
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Rest.ClientRuntime.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Microsoft.Web.Infrastructure.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\MySql.Data.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\MySql.Data.Entity.EF6.dll

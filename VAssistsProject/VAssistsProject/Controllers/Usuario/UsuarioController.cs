@@ -6,27 +6,18 @@ using VAssists.DataTransfer.Usuarios.responses;
 
 namespace VAssistsProject.Controllers.Usuario
 {
-    /// <summary>
-    ///
-    /// </summary>
+
     public class UsuarioController : ApiController
     {
         private readonly IUsuarioAppServico usuarioAppServico;
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="usuarioAppServico"></param>
+
         public UsuarioController(IUsuarioAppServico usuarioAppServico)
         {
             this.usuarioAppServico = usuarioAppServico;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="codigoUsuario"></param>
-        /// <returns></returns>
+
         [HttpGet]
         [Route("api/usuario/{codigoUsuario:int}")]
         [ResponseType(typeof(UsuarioResponse))]
@@ -35,11 +26,7 @@ namespace VAssistsProject.Controllers.Usuario
             return Ok(usuarioAppServico.RetornaUsuario(codigoUsuario));
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
+
         [HttpPost]
         [Route("api/usuario")]
         [ResponseType(typeof(UsuarioResponse))]

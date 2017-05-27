@@ -17,7 +17,27 @@ namespace VAssists.AppService.Painel
             this.painelRepositorio = painelRepositorio;
         }
 
-        public void InserirPerfil(InserirPainelRequest request)
+        public void AlterarPerfil(int codigoPerfil, AlterarPerfilRequest request)
+        {
+            painelRepositorio.AlterarPerfil(codigoPerfil, request.Descricao, request.Identificacao);
+        }
+
+        public void AlterarTipo(int codigoTipo, AlterarTipoRequest request)
+        {
+            painelRepositorio.AlterarTipo(codigoTipo, request.Descricao, request.Identificacao);
+        }
+
+        public void DeletarPerfil(int codigoPerfil)
+        {
+            painelRepositorio.DeletarTipo(codigoPerfil);
+        }
+
+        public void DeletarTipo(int codigoTipo)
+        {
+            painelRepositorio.DeletarTipo(codigoTipo);
+        }
+
+        public void InserirPerfil(InserirPerfilRequest request)
         {
             painelRepositorio.InserirPerfil(request.Descricao, request.Identificao);
         }
@@ -45,6 +65,35 @@ namespace VAssists.AppService.Painel
                 Descricao = x.NomeTipo,
                 IDTTipo = x.IdtTipo
             });
+        }
+
+        public PerfilResponse RetornarPerfil(int codigoPerfil)
+        {
+            var perfil = painelRepositorio.RetornarPerfil(codigoPerfil);
+
+            PerfilResponse response = new PerfilResponse()
+            {
+               Codigo = perfil.IdPerfil,
+               Descricao = perfil.NomePerfil,
+               IDTPerfil = perfil.IdtPerfil
+            };
+
+            return response;
+        }
+
+        public TipoResponse RetornarTipo(int codigoTipo)
+        {
+            var perfil = painelRepositorio.RetornarTipo(codigoTipo);
+
+            TipoResponse response = new TipoResponse()
+            {
+                Codigo = perfil.IdTipo,
+                Descricao = perfil.NomeTipo,
+                IDTTipo = perfil.IdtTipo
+            };
+
+
+            return response;
         }
     }
 }
