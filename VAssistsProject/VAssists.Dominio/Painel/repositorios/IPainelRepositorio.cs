@@ -18,5 +18,6 @@ namespace VDominio.Painel.repositorios
         void AlterarTipo(int codigoTipo, string descricao, string identificacao);
         Perfil RetornarPerfil(int codigoPerfil);
         Tipo RetornarTipo(int codigoTipo);
+        IEnumerable<Perfil> ListarPerfilSemAdmin();
     }
 }

@@ -1,4 +1,5 @@
-﻿using VDominio.Modelo;
+﻿using Dominio.Seguranca.entidades;
+using VDominio.Modelo;
 
 namespace VDominio.Pontos
 {
@@ -8,5 +9,6 @@ namespace VDominio.Pontos
 
         void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao);
         void DeletarPonto(int codigoPonto);
+        ListaPontos ListarPontos(string nomeUsuario, int pg, int qt);
     }
 }

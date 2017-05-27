@@ -57,6 +57,16 @@ namespace VAssists.AppService.Painel
             });
         }
 
+        public IEnumerable<PerfilResponse> ListarPerfilSemAdmin()
+        {
+            return painelRepositorio.ListarPerfilSemAdmin().Select(x => new PerfilResponse
+            {
+                Codigo = x.IdPerfil,
+                Descricao = x.NomePerfil,
+                IDTPerfil = x.IdtPerfil
+            });
+        }
+
         public IEnumerable<TipoResponse> ListarTipo()
         {
             return painelRepositorio.ListarTipo().Select(x => new TipoResponse

@@ -82,6 +82,11 @@ namespace VAssistsInfra.Painel.repositorios
             return session.Query<Perfil>();
         }
 
+        public IEnumerable<Perfil> ListarPerfilSemAdmin()
+        {
+            return session.Query<Perfil>().Where(x => x.IdtPerfil != "A");
+        }
+
         public IEnumerable<Tipo> ListarTipo()
         {
             return session.Query<Tipo>();

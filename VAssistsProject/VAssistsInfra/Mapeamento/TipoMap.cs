@@ -11,7 +11,7 @@ namespace VAssistsInfra.Modelo.Mapeamento
 
             Map(x => x.NomeTipo).Not.Nullable();
 
-            Map(x => x.IdTipo).Not.Nullable();
+            Map(x => x.IdtTipo).Not.Nullable();
         }
     }
 }

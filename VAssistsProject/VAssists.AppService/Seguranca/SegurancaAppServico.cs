@@ -39,6 +39,8 @@ namespace VAssists.AppService.Seguranca
                 Perfil = usuario.Perfil.IdtPerfil
             };
 
+            segurancaRepositorio.InserirDataLogin(usuario.IdUsuario);
+
             return response;
         }
     }

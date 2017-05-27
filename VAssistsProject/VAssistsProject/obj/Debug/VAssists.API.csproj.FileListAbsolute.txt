@@ -253,7 +253,9 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Owin.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Swashbuckle.AutoRestExtensions.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Swashbuckle.Core.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Net.Http.Formatting.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Cors.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Helpers.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Cors.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Owin.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.WebHost.dll
@@ -299,6 +301,7 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.Mvc.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.WebApi.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Ninject.Web.WebApi.WebHost.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\nunit.framework.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Cors.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Net.Http.Formatting.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Helpers.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.xml

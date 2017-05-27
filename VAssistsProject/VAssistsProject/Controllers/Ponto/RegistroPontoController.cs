@@ -34,6 +34,15 @@ namespace VAssistsProject.Controllers.Ponto
             return Ok();
         }
 
+
+        [HttpGet]
+        [Route("api/ponto")]
+        [ResponseType(typeof(PontosComPaginacaoResponse))]
+        public IHttpActionResult ListarPontos([FromUri] ListarPontosRequest request)
+        {
+            return Ok(registroPontoAppServico.ListarPontos(request));
+        }
+
         [HttpDelete]
         [Route("api/ponto/{codigoPonto:int}")]
         public IHttpActionResult DeletarPonto([FromUri] int codigoPonto)

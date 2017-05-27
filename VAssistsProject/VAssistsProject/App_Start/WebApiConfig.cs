@@ -4,6 +4,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using VAssistsProject.App_Start.Filters;
 
 namespace VAssistsProject
 {
@@ -36,6 +37,8 @@ namespace VAssistsProject
 
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
+
+            config.Filters.Add(new GeneralFilterException());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

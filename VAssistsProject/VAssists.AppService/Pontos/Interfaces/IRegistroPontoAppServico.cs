@@ -9,5 +9,6 @@ namespace VAssists.AppService.Pontos.Interfaces
 
         void RegistrarPonto(RegistrarPontoRequest request);
         void DeletarPonto(int codigoPonto);
+        PontosComPaginacaoResponse ListarPontos(ListarPontosRequest request);
     }
 }

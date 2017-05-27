@@ -5,6 +5,7 @@ using VAssistsInfra.Conexao;
 using NHibernate;
 using NHibernate.Linq;
 using System.Linq;
+using Dominio.Seguranca.entidades;
 
 namespace VAssistsInfra.Pontos.repositorios
 {
@@ -27,8 +28,30 @@ namespace VAssistsInfra.Pontos.repositorios
             session.Transaction.Commit();
         }
 
+        public ListaPontos ListarPontos(string nomeUsuario, int pg, int qt)
+        {
+            ListaPontos response = new ListaPontos();
+
+            var pagina = pg - 1;
+            var query = session.Query<Ponto>();
+
+            if (!string.IsNullOrEmpty(nomeUsuario))
+            {
+                query = query.Where<Ponto>(x => x.Usuario.NomeUsuario.ToUpper().Like(nomeUsuario.ToUpper()));
+            }
+
+            var result = query.Skip(pagina * qt).Take(qt).ToList();
+
+            response.pontos = result;
+            response.pagina = pg;
+            response.quantidade = result.Count;
+
+            return response;
+        }
+
         public void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao)
         {
+            session.BeginTransaction();
             Ponto ponto = new Ponto
             {
                 Latitude = latitude,
@@ -40,6 +63,8 @@ namespace VAssistsInfra.Pontos.repositorios
             };
 
             session.Save(ponto);
+
+            session.Transaction.Commit();
         }
 
         public Ponto RetornarPonto(int codigo)

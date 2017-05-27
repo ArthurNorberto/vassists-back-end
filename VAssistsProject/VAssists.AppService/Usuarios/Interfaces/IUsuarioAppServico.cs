@@ -8,5 +8,6 @@ namespace VAssists.AppService.Usuarios.Interfaces
         UsuarioResponse RetornaUsuario(int codigoUsuario);
 
         void CadastrarUsuario(CadastrarUsuariosRequest request);
+        UsuarioComPaginacaoResponse ListarUsuarios(ListarUsuariosRequest request);
     }
 }

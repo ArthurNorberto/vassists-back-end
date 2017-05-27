@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using VAssistsInfra.Auxiliares;
 using VAssistsInfra.Conexao;
+using System;
 
 namespace VAssistsInfra.Seguranca.repositorios
 {
@@ -37,13 +38,26 @@ namespace VAssistsInfra.Seguranca.repositorios
             }
         }
 
+        public void InserirDataLogin(int codigoUsuario)
+        {
+            session.BeginTransaction();
+            var usuario = session.Query<Usuario>().Where(x => x.IdUsuario == codigoUsuario).FirstOrDefault();
+
+            usuario.Dataultimologin = new DateTime();
+
+            
+            session.Update(usuario);
+
+            session.Transaction.Commit();
+        }
+
         public Usuario LogarNoSistema(string login, string senha)
         {
             using (MD5 md5Hash = MD5.Create())
             {
                 string hash = ConfigMD5.GetMd5Hash(md5Hash, senha);
 
-                var usuario = session.Query<Usuario>().Where<Usuario>(x => x.Email == login && x.Senha == hash).FirstOrDefault();
+                var usuario = session.Query<Usuario>().Where(x => x.Email == login && x.Senha == hash).FirstOrDefault();
 
                 return usuario;
             }

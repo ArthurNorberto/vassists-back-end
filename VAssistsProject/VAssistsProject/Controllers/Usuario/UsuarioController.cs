@@ -26,6 +26,14 @@ namespace VAssistsProject.Controllers.Usuario
             return Ok(usuarioAppServico.RetornaUsuario(codigoUsuario));
         }
 
+        [HttpGet]
+        [Route("api/usuario")]
+        [ResponseType(typeof(UsuarioComPaginacaoResponse))]
+        public IHttpActionResult ListarUsuarios([FromUri] ListarUsuariosRequest request)
+        {
+            return Ok(usuarioAppServico.ListarUsuarios(request));
+        }
+
 
         [HttpPost]
         [Route("api/usuario")]

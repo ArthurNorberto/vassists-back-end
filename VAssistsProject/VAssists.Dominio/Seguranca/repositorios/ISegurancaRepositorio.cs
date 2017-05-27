@@ -7,5 +7,7 @@ namespace VDominio.Seguranca.repositorios
         Usuario LogarNoSistema(string login, string senha);
 
         void CadastroSistema(string nome, string email, int codigoPerfil);
+
+        void InserirDataLogin(int codigoUsuario);
     }
 }

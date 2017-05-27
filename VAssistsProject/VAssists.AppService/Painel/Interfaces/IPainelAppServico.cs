@@ -20,5 +20,6 @@ namespace VAssists.AppService.Painel.Interfaces
         void DeletarTipo(int codigoTipo);
         PerfilResponse RetornarPerfil(int codigoPerfil);
         TipoResponse RetornarTipo(int codigoTipo);
+        IEnumerable<PerfilResponse> ListarPerfilSemAdmin();
     }
 }

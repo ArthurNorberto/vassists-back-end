@@ -28,6 +28,14 @@ namespace VAssistsProject.Controllers.Painel
         }
 
         [HttpGet]
+        [Route("api/perfil-sem")]
+        [ResponseType(typeof(IEnumerable<PerfilResponse>))]
+        public IHttpActionResult ListarPerfilSemAdmin()
+        {
+            return Ok(painelAppServico.ListarPerfilSemAdmin());
+        }
+
+        [HttpGet]
         [Route("api/perfil/{codigoPerfil:int}")]
         [ResponseType(typeof(PerfilResponse))]
         public IHttpActionResult RetornarPerfil([FromUri]int codigoPerfil)
