@@ -1,21 +1,39 @@
-﻿using VDominio.Modelo;
-using VDominio.Usuarios.repositorios;
-using NHibernate;
-using VAssistsInfra.Conexao;
+﻿using Dominio.Usuarios.entidades;
 using NHibernate.Linq;
 using System.Linq;
-using System;
-using Dominio.Usuarios.entidades;
+using System.Security.Cryptography;
+using VAssistsInfra.Auxiliares;
+using VDominio.Modelo;
+using VDominio.Usuarios.repositorios;
 
 namespace VAssistsInfra.Usuarios.repositorios
 {
-    public class UsuarioRepositorio : IUsuarioRepositorio
+    public class UsuarioRepositorio : GenericoRepositorio, IUsuarioRepositorio
     {
-        private readonly ISession session;
-
-        public UsuarioRepositorio()
+        public void AlterarSenha(int codigoUsuario, string senhaNova)
         {
-            session = SessionFactory.OpenSession();
+            string hash;
+            using (MD5 md5Hash = MD5.Create())
+            {
+                hash = ConfigMD5.GetMd5Hash(md5Hash, "123456");
+            }
+
+            var usuario = session.Query<Usuario>().Where(x => x.IdUsuario == codigoUsuario).FirstOrDefault();
+
+            usuario.Senha = hash;
+
+            session.Update(usuario);
+        }
+
+        public void AlterarUsuario(Perfil perfil, int codigoUsuario, string email, string nome)
+        {
+            var usuario = session.Query<Usuario>().Where(x => x.IdUsuario == codigoUsuario).FirstOrDefault();
+
+            usuario.Perfil = perfil;
+            usuario.Email = email;
+            usuario.NomeUsuario = nome;
+
+            session.Update(usuario);
         }
 
         public void CadastrarUsuario(Perfil perfil, string email, string nome)
@@ -30,6 +48,13 @@ namespace VAssistsInfra.Usuarios.repositorios
             session.Save(usuario);
         }
 
+        public void ExcluirUsuario(int codigoUsuario)
+        {
+            var usuario = session.Query<Usuario>().Where(x => x.IdUsuario == codigoUsuario).FirstOrDefault();
+
+            session.Delete(usuario);
+        }
+
         public ListaUsuarios ListarUsuarios(string nome, string email, int perfil, int pg, int qt)
         {
             ListaUsuarios response = new ListaUsuarios();
@@ -39,11 +64,11 @@ namespace VAssistsInfra.Usuarios.repositorios
 
             if (!string.IsNullOrEmpty(nome))
             {
-                query = query.Where<Usuario>(x => x.NomeUsuario.ToUpper().Like(nome.ToUpper()));
+                query = query.Where(x => x.NomeUsuario.ToUpper().Like("%" + nome.ToUpper() + "%"));
             }
             if (!string.IsNullOrEmpty(email))
             {
-                query = query.Where<Usuario>(x => x.Email.ToUpper().Like(email.ToUpper()));
+                query = query.Where(x => x.Email.ToUpper().Like("%" + email.ToUpper() + "%"));
             }
 
             if (perfil != 0)
@@ -58,6 +83,21 @@ namespace VAssistsInfra.Usuarios.repositorios
             response.quantidade = result.Count;
 
             return response;
+        }
+
+        public void ResetarSenha(int codigoUsuario)
+        {
+            string hash;
+            using (MD5 md5Hash = MD5.Create())
+            {
+                hash = ConfigMD5.GetMd5Hash(md5Hash, "123456");
+            }
+
+            var usuario = session.Query<Usuario>().Where(x => x.IdUsuario == codigoUsuario).FirstOrDefault();
+
+            usuario.Senha = hash;
+
+            session.Update(usuario);
         }
 
         public Usuario RetornaUsuario(int codigoUsuario)

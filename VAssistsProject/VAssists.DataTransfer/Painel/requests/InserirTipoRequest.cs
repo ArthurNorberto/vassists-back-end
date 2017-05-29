@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VAssists.DataTransfer.Painel.requests
+﻿namespace VAssists.DataTransfer.Painel.requests
 {
     public class InserirTipoRequest
     {
         public string Descricao { get; set; }
-        public string Identificao { get; set; }
+        public string Identificacao { get; set; }
     }
 }

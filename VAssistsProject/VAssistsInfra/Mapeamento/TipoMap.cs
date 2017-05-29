@@ -1,5 +1,5 @@
-﻿using VDominio.Modelo;
-using FluentNHibernate.Mapping;
+﻿using FluentNHibernate.Mapping;
+using VDominio.Modelo;
 
 namespace VAssistsInfra.Modelo.Mapeamento
 {

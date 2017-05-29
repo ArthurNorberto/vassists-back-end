@@ -271,8 +271,8 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\WebActivatorEx.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\WebGrease.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Ninject.Extensions.Conventions.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.dll
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\NHibernate.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\NHibernate.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssists.AppService.dll.config
@@ -321,9 +321,9 @@ C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\System.Web.Http.Owi
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Ninject.Extensions.Conventions.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\VAssistsInfra.dll.config
-C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\NHibernate.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\FluentNHibernate.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\NHibernate.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\bin\Iesi.Collections.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssists.API.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssistsProject\obj\Debug\VAssistsProject.dll

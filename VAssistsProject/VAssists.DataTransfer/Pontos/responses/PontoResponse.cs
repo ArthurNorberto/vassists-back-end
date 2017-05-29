@@ -10,5 +10,6 @@ namespace VAssists.DataTransfer.Pontos.responses
         public string Tipo { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
+        public string Endereco { get; set; }
     }
 }

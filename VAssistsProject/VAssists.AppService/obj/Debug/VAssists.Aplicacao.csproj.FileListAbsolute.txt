@@ -6,8 +6,8 @@ C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.d
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.Extensions.Conventions.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssists.DataTransfer.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssistsInfra.dll
-C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\NHibernate.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\FluentNHibernate.dll
+C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\NHibernate.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\Iesi.Collections.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\Dominio.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssists.DataTransfer.pdb
@@ -15,9 +15,9 @@ C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssistsI
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\VAssistsInfra.dll.config
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\Ninject.Extensions.Conventions.xml
-C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\NHibernate.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\FluentNHibernate.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\FluentNHibernate.xml
+C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\NHibernate.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\bin\Debug\Iesi.Collections.xml
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\obj\Debug\VAssists.Aplicacao.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssists.AppService\obj\Debug\VAssists.AppService.dll

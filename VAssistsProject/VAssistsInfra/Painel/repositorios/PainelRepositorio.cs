@@ -1,66 +1,54 @@
-﻿using NHibernate;
-using System;
+﻿using NHibernate.Linq;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VAssistsInfra.Conexao;
-using NHibernate.Linq;
-using VDominio.Painel.repositorios;
+using VAssistsInfra.Auxiliares;
 using VDominio.Modelo;
+using VDominio.Painel.repositorios;
 
 namespace VAssistsInfra.Painel.repositorios
 {
-    public class PainelRepositorio : IPainelRepositorio
+    public class PainelRepositorio : GenericoRepositorio, IPainelRepositorio
     {
-        private readonly ISession session;
-
-        public PainelRepositorio()
-        {
-            session = SessionFactory.OpenSession();
-        }
-
         public void AlterarPerfil(int codigoPerfil, string descricao, string identificacao)
         {
-            session.BeginTransaction();
             var perfil = session.Query<Perfil>().Where<Perfil>(x => x.IdPerfil == codigoPerfil).FirstOrDefault();
 
             perfil.IdtPerfil = identificacao;
             perfil.NomePerfil = descricao;
 
             session.Update(perfil);
-
-            session.Transaction.Commit();
         }
 
         public void AlterarTipo(int codigoTipo, string descricao, string identificacao)
         {
-            session.BeginTransaction();
             var tipo = session.Query<Tipo>().Where<Tipo>(x => x.IdTipo == codigoTipo).FirstOrDefault();
 
             tipo.IdtTipo = identificacao;
             tipo.NomeTipo = descricao;
 
             session.Update(tipo);
+        }
 
-            session.Transaction.Commit();
+        public void DeletarPerfil(int codigoPerfil)
+        {
+            var perfil = session.Query<Perfil>().Where(x => x.IdPerfil == codigoPerfil).FirstOrDefault();
+
+            session.Delete(perfil);
         }
 
         public void DeletarTipo(int codigoTipo)
         {
-            session.BeginTransaction();
             var tipo = session.Query<Tipo>().Where<Tipo>(x => x.IdTipo == codigoTipo).FirstOrDefault();
 
             session.Delete(tipo);
-            session.Transaction.Commit();
         }
 
         public void InserirPerfil(string descricao, string identificao)
         {
             Perfil perfil = new Perfil
             {
-               NomePerfil = descricao,
-               IdtPerfil = identificao
+                NomePerfil = descricao,
+                IdtPerfil = identificao
             };
 
             session.Save(perfil);

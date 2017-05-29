@@ -1,5 +1,4 @@
-﻿using VDominio.Modelo;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using NHibernate;
 using NHibernate.Linq;
 using NUnit.Framework;
@@ -7,6 +6,7 @@ using System;
 using System.Data;
 using System.Linq;
 using VAssistsInfra.Conexao;
+using VDominio.Modelo;
 
 namespace VAssists.Teste
 {
@@ -28,13 +28,13 @@ namespace VAssists.Teste
         [Test]
         public void TesteDeConexaoNHibernate()
         {
-            Assert.DoesNotThrow(() => SessionFactory.OpenSession());
+            var a = SessionSingleton.Session;
         }
 
         [Test]
         public void TesteSelect()
         {
-            using (ISession session = SessionFactory.OpenSession())
+            using (ISession session = SessionSingleton.Session)
             {
                 var query = session.CreateSQLQuery("SELECT COUNT(1) QTD FROM USUARIO");
                 var resultado = query.UniqueResult();
@@ -44,17 +44,11 @@ namespace VAssists.Teste
         }
 
         [Test]
-        public void TesteConnectionString()
-        {
-            Assert.AreEqual("Server=localhost;Database=producao;Uid=root;Pwd=root;", SessionFactory.connectionString);
-        }
-
-        [Test]
         public void TesteDeInsertPerfil()
         {
             int atual = 0;
             int resultado = 0;
-            using (ISession session = SessionFactory.OpenSession())
+            using (ISession session = SessionSingleton.Session)
             {
                 using (ITransaction transaction = session.BeginTransaction())
                 {

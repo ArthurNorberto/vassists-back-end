@@ -2,14 +2,14 @@
 
 namespace VAssists.DataTransfer.Pontos.requests
 {
-    public class ListarPontosRequest
+    public class ListarMeusPontosRequest
     {
-        public string NomeUsuario { get; set; }
+        public int CodigoUsuario { get; set; }
         public DateTime? DataInicial { get; set; }
         public DateTime? DataFinal { get; set; }
         public int CodigoTipo { get; set; }
         public string Endereco { get; set; }
-        public int qt { get; set; }
         public int pg { get; set; }
+        public int qt { get; set; }
     }
 }

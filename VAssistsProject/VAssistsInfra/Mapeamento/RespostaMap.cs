@@ -1,5 +1,5 @@
-﻿using VDominio.Modelo;
-using FluentNHibernate.Mapping;
+﻿using FluentNHibernate.Mapping;
+using VDominio.Modelo;
 
 namespace VAssistsInfra.Modelo.Mapeamento
 {
@@ -13,8 +13,8 @@ namespace VAssistsInfra.Modelo.Mapeamento
 
             Map(x => x.Texto).Not.Nullable();
 
-            References(x => x.Usuario).Column("IdUsuario").Cascade.All();
-            References(x => x.Ponto).Column("IdPonto").Cascade.All();
+            References(x => x.Usuario).Column("IdUsuario").Cascade.SaveUpdate();
+            References(x => x.Ponto).Column("IdPonto").Cascade.SaveUpdate();
         }
     }
 }

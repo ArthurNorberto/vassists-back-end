@@ -46,6 +46,7 @@
     <Compile Include="Painel\requests\InserirTipoRequest.cs" />
     <Compile Include="Painel\responses\PerfilResponse.cs" />
     <Compile Include="Painel\responses\TipoResponse.cs" />
+    <Compile Include="Pontos\requests\ListarMeusPontosRequest.cs" />
     <Compile Include="Pontos\requests\ListarPontosRequest.cs" />
     <Compile Include="Pontos\requests\RegistrarPontoRequest.cs" />
     <Compile Include="Pontos\responses\PontoResponse.cs" />
@@ -54,6 +55,8 @@
     <Compile Include="Seguranca\requests\CadastroUsuarioRequest.cs" />
     <Compile Include="Seguranca\requests\LoginSistemaRequest.cs" />
     <Compile Include="Seguranca\responses\UsuarioLogadoResponse.cs" />
+    <Compile Include="Usuarios\requests\AlterarSenhaRequest.cs" />
+    <Compile Include="Usuarios\requests\AlterarUsuarioRequest.cs" />
     <Compile Include="Usuarios\requests\CadastrarUsuariosRequest.cs" />
     <Compile Include="Usuarios\requests\ListarUsuariosRequest.cs" />
     <Compile Include="Usuarios\responses\UsuarioComPaginacaoResponse.cs" />

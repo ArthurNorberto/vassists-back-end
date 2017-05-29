@@ -8,6 +8,7 @@ namespace VDominio.Modelo
         public virtual string NomeUsuario { get; set; }
         public virtual string Email { get; set; }
         public virtual string Senha { get; set; }
+        public virtual string Sexo { get; set; }
         public virtual DateTime Dataultimologin { get; set; }
         public virtual Perfil Perfil { get; set; }
     }

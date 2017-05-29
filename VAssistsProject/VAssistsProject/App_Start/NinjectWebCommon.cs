@@ -11,7 +11,6 @@ namespace VAssistsProject.App_Start
     using System.Collections.Generic;
     using System.Web;
     using VAssists.AppService.Ninject;
- 
 
     public static class NinjectWebCommon
     {

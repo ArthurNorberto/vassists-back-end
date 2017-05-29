@@ -12,5 +12,6 @@ namespace VDominio.Modelo
         public virtual decimal Longitude { get; set; }
         public virtual Usuario Usuario { get; set; }
         public virtual Tipo Tipo { get; set; }
+        public virtual string Endereco { get; set; }
     }
 }

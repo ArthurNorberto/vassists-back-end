@@ -1,43 +1,47 @@
-﻿using VDominio.Modelo;
-using VDominio.Pontos;
-using System;
-using VAssistsInfra.Conexao;
-using NHibernate;
+﻿using Dominio.Seguranca.entidades;
 using NHibernate.Linq;
+using System;
 using System.Linq;
-using Dominio.Seguranca.entidades;
+using VAssistsInfra.Auxiliares;
+using VDominio.Modelo;
+using VDominio.Pontos;
 
 namespace VAssistsInfra.Pontos.repositorios
 {
-    public class RegistroPontoRepositorio : IRegistroPontoRepositorio
+    public class RegistroPontoRepositorio : GenericoRepositorio, IRegistroPontoRepositorio
     {
-        private readonly ISession session;
-
-        public RegistroPontoRepositorio()
-        {
-            session = SessionFactory.OpenSession();
-        }
-
         public void DeletarPonto(int codigoPonto)
         {
-            session.BeginTransaction();
             var ponto = session.Query<Ponto>().Where<Ponto>(x => x.IdPonto == codigoPonto).FirstOrDefault();
 
             session.Delete(ponto);
-
-            session.Transaction.Commit();
         }
 
-        public ListaPontos ListarPontos(string nomeUsuario, int pg, int qt)
+        public ListaPontos ListarMeusPontos(int codigoUsuario, DateTime? dataInicial, DateTime? dataFinal, string endereco, int codigoTipo, int pg, int qt)
         {
             ListaPontos response = new ListaPontos();
 
             var pagina = pg - 1;
             var query = session.Query<Ponto>();
 
-            if (!string.IsNullOrEmpty(nomeUsuario))
+            if (codigoUsuario != 0)
             {
-                query = query.Where<Ponto>(x => x.Usuario.NomeUsuario.ToUpper().Like(nomeUsuario.ToUpper()));
+                query = query.Where(x => x.Usuario.IdUsuario == codigoUsuario);
+            }
+
+            if (dataInicial != null)
+            {
+                query = query.Where(x => x.DataCadastrado >= dataInicial);
+            }
+
+            if (dataFinal != null)
+            {
+                query = query.Where(x => x.DataCadastrado <= dataFinal);
+            }
+
+            if (!string.IsNullOrEmpty(endereco))
+            {
+                query = query.Where(x => x.Endereco.ToUpper().Like(endereco.ToUpper()));
             }
 
             var result = query.Skip(pagina * qt).Take(qt).ToList();
@@ -49,22 +53,61 @@ namespace VAssistsInfra.Pontos.repositorios
             return response;
         }
 
-        public void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao)
+        public ListaPontos ListarPontos(string nomeUsuario, DateTime? dataInicial, DateTime? dataFinal, string endereco, int codigoTipo, int pg, int qt)
         {
-            session.BeginTransaction();
+            ListaPontos response = new ListaPontos();
+
+            var pagina = pg - 1;
+            var query = session.Query<Ponto>();
+
+            if (!string.IsNullOrEmpty(nomeUsuario))
+            {
+                query = query.Where(x => x.Usuario.NomeUsuario.ToUpper().Like("%" + nomeUsuario.ToUpper() + "%"));
+            }
+
+            if (dataInicial != null)
+            {
+                query = query.Where(x => x.DataCadastrado >= dataInicial);
+            }
+
+            if (dataFinal != null)
+            {
+                query = query.Where(x => x.DataCadastrado <= dataFinal);
+            }
+
+            if (!string.IsNullOrEmpty(endereco))
+            {
+                query = query.Where(x => x.Endereco.ToUpper().Like("%" + endereco.ToUpper() + "%"));
+            }
+
+            if (codigoTipo != 0)
+            {
+                query = query.Where(x => x.Tipo.IdTipo == codigoTipo);
+            }
+
+            var result = query.Skip(pagina * qt).Take(qt).ToList();
+
+            response.pontos = result;
+            response.pagina = pg;
+            response.quantidade = result.Count;
+
+            return response;
+        }
+
+        public void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string endereco)
+        {
             Ponto ponto = new Ponto
             {
                 Latitude = latitude,
                 Longitude = longitude,
-                DataCadastrado = new DateTime(),
+                DataCadastrado = DateTime.Now,
                 Observacao = observacao,
                 Tipo = tipo,
-                Usuario = usuario
+                Usuario = usuario,
+                Endereco = endereco
             };
 
             session.Save(ponto);
-
-            session.Transaction.Commit();
         }
 
         public Ponto RetornarPonto(int codigo)

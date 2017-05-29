@@ -1,25 +1,16 @@
-﻿using VDominio.Modelo;
-using VDominio.Seguranca.repositorios;
-using NHibernate;
-using NHibernate.Linq;
+﻿using NHibernate.Linq;
+using System;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using VAssistsInfra.Auxiliares;
-using VAssistsInfra.Conexao;
-using System;
+using VDominio.Modelo;
+using VDominio.Seguranca.repositorios;
 
 namespace VAssistsInfra.Seguranca.repositorios
 {
-    public class SegurancaRepositorio : ISegurancaRepositorio
+    public class SegurancaRepositorio : GenericoRepositorio, ISegurancaRepositorio
     {
-        private readonly ISession session;
-
-        public SegurancaRepositorio()
-        {
-            session = SessionFactory.OpenSession();
-        }
-
         public void CadastroSistema(string nome, string email, int codigoPerfil)
         {
             using (MD5 md5Hash = MD5.Create())
@@ -40,15 +31,11 @@ namespace VAssistsInfra.Seguranca.repositorios
 
         public void InserirDataLogin(int codigoUsuario)
         {
-            session.BeginTransaction();
             var usuario = session.Query<Usuario>().Where(x => x.IdUsuario == codigoUsuario).FirstOrDefault();
 
-            usuario.Dataultimologin = new DateTime();
+            usuario.Dataultimologin = DateTime.Now;
 
-            
             session.Update(usuario);
-
-            session.Transaction.Commit();
         }
 
         public Usuario LogarNoSistema(string login, string senha)

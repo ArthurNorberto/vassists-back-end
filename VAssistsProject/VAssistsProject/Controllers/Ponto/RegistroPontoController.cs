@@ -6,17 +6,14 @@ using VAssists.DataTransfer.Pontos.responses;
 
 namespace VAssistsProject.Controllers.Ponto
 {
-
     public class RegistroPontoController : ApiController
     {
         private readonly IRegistroPontoAppServico registroPontoAppServico;
-
 
         public RegistroPontoController(IRegistroPontoAppServico registroPontoAppServico)
         {
             this.registroPontoAppServico = registroPontoAppServico;
         }
-
 
         [HttpGet]
         [Route("api/ponto/{codigoPonto:int}")]
@@ -34,13 +31,20 @@ namespace VAssistsProject.Controllers.Ponto
             return Ok();
         }
 
-
         [HttpGet]
         [Route("api/ponto")]
         [ResponseType(typeof(PontosComPaginacaoResponse))]
         public IHttpActionResult ListarPontos([FromUri] ListarPontosRequest request)
         {
             return Ok(registroPontoAppServico.ListarPontos(request));
+        }
+
+        [HttpGet]
+        [Route("api/meu-ponto")]
+        [ResponseType(typeof(PontosComPaginacaoResponse))]
+        public IHttpActionResult ListarMeusPontos([FromUri] ListarMeusPontosRequest request)
+        {
+            return Ok(registroPontoAppServico.ListarMeusPontos(request));
         }
 
         [HttpDelete]

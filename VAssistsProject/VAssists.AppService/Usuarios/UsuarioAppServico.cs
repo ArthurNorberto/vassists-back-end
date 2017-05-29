@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using VAssists.AppService.Usuarios.Interfaces;
 using VAssists.DataTransfer.Usuarios.requests;
 using VAssists.DataTransfer.Usuarios.responses;
+using VAssistsInfra.Conexao;
 using VDominio.Painel.repositorios;
 using VDominio.Usuarios.repositorios;
 
@@ -18,16 +20,90 @@ namespace VAssists.AppService.Usuarios
             this.painelRepositorio = painelRepositorio;
         }
 
+        public void AlterarSenha(int codigoUsuario, AlterarSenhaRequest request)
+        {
+            if (request.SenhaAntiga == request.SenhaNova)
+            {
+                throw new Exception("A senha antiga é a mesma que a nova");
+            }
+
+            if (request.SenhaNova != request.SenhaNovaConfirme)
+            {
+                throw new Exception("As senhas não são parecidas!");
+            }
+
+            try
+            {
+                SessionSingleton.BeginTransaction();
+
+                usuarioRepositorio.AlterarSenha(codigoUsuario, request.SenhaNova);
+
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
+        }
+
+        public void AlterarUsuario(int codigoUsuario, AlterarUsuarioRequest request)
+        {
+            try
+            {
+                SessionSingleton.BeginTransaction();
+
+                var perfil = painelRepositorio.RetornarPerfil(request.CodigoPerfil);
+
+                usuarioRepositorio.AlterarUsuario(perfil, codigoUsuario, request.Email, request.Nome);
+
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
+        }
+
         public void CadastrarUsuario(CadastrarUsuariosRequest request)
         {
-            var perfil = painelRepositorio.RetornarPerfil(request.CodigoPerfil);
+            try
+            {
+                SessionSingleton.BeginTransaction();
+                var perfil = painelRepositorio.RetornarPerfil(request.CodigoPerfil);
 
-            usuarioRepositorio.CadastrarUsuario(perfil, request.Email, request.Nome);
+                usuarioRepositorio.CadastrarUsuario(perfil, request.Email, request.Nome);
+
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
+        }
+
+        public void ExcluirUsuario(int codigoUsuario)
+        {
+            try
+            {
+                SessionSingleton.BeginTransaction();
+
+                usuarioRepositorio.ExcluirUsuario(codigoUsuario);
+
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public UsuarioComPaginacaoResponse ListarUsuarios(ListarUsuariosRequest request)
         {
-            var resultado = usuarioRepositorio.ListarUsuarios(request.Nome, request.Email, request.Perfil, request.pg, request.qt);
+            var resultado = usuarioRepositorio.ListarUsuarios(request.Nome, request.Email, request.CodigoPerfil, request.pg, request.qt);
 
             UsuarioComPaginacaoResponse response = new UsuarioComPaginacaoResponse()
             {
@@ -44,6 +120,23 @@ namespace VAssists.AppService.Usuarios
             };
 
             return response;
+        }
+
+        public void ResetarSenha(int codigoUsuario)
+        {
+            try
+            {
+                SessionSingleton.BeginTransaction();
+
+                usuarioRepositorio.ResetarSenha(codigoUsuario);
+
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public UsuarioResponse RetornaUsuario(int codigoUsuario)

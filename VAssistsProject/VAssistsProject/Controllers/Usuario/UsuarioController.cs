@@ -6,17 +6,14 @@ using VAssists.DataTransfer.Usuarios.responses;
 
 namespace VAssistsProject.Controllers.Usuario
 {
-
     public class UsuarioController : ApiController
     {
         private readonly IUsuarioAppServico usuarioAppServico;
-
 
         public UsuarioController(IUsuarioAppServico usuarioAppServico)
         {
             this.usuarioAppServico = usuarioAppServico;
         }
-
 
         [HttpGet]
         [Route("api/usuario/{codigoUsuario:int}")]
@@ -24,6 +21,23 @@ namespace VAssistsProject.Controllers.Usuario
         public IHttpActionResult RetornaUsuario([FromUri] int codigoUsuario)
         {
             return Ok(usuarioAppServico.RetornaUsuario(codigoUsuario));
+        }
+
+        [HttpPut]
+        [Route("api/usuario/{codigoUsuario:int}")]
+        [ResponseType(typeof(UsuarioResponse))]
+        public IHttpActionResult AlterarUsuario([FromUri] int codigoUsuario, [FromBody] AlterarUsuarioRequest request)
+        {
+            usuarioAppServico.AlterarUsuario(codigoUsuario, request);
+            return Ok();
+        }
+
+        [HttpPatch]
+        [Route("api/usuario/{codigoUsuario:int}/senha")]
+        public IHttpActionResult ResetarSenha([FromUri] int codigoUsuario)
+        {
+            usuarioAppServico.ResetarSenha(codigoUsuario);
+            return Ok();
         }
 
         [HttpGet]
@@ -34,6 +48,21 @@ namespace VAssistsProject.Controllers.Usuario
             return Ok(usuarioAppServico.ListarUsuarios(request));
         }
 
+        [HttpDelete]
+        [Route("api/usuario/{codigoUsuario:int}")]
+        public IHttpActionResult ExcluirUsuario([FromUri] int codigoUsuario)
+        {
+            usuarioAppServico.ExcluirUsuario(codigoUsuario);
+            return Ok();
+        }
+
+        [HttpPut]
+        [Route("api/usuario/{codigoUsuario:int}/senha")]
+        public IHttpActionResult AlterarSenha([FromUri] int codigoUsuario, [FromBody] AlterarSenhaRequest request)
+        {
+            usuarioAppServico.AlterarSenha(codigoUsuario, request);
+            return Ok();
+        }
 
         [HttpPost]
         [Route("api/usuario")]

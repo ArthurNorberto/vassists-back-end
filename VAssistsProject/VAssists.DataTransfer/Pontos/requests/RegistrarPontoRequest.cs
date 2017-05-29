@@ -5,7 +5,8 @@
         public int CodigoUsuario { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
-        public int Tipo { get; set; }
+        public int CodigoTipo { get; set; }
         public string Observacao { get; set; }
+        public string Endereco { get; set; }
     }
 }

@@ -1,5 +1,5 @@
-﻿using VDominio.Modelo;
-using FluentNHibernate.Mapping;
+﻿using FluentNHibernate.Mapping;
+using VDominio.Modelo;
 
 namespace VAssistsInfra.Modelo.Mapeamento
 {
@@ -17,7 +17,7 @@ namespace VAssistsInfra.Modelo.Mapeamento
 
             Map(x => x.Dataultimologin);
 
-            References(x => x.Perfil).Column("IdPerfil").Cascade.All();
+            References(x => x.Perfil).Column("IdPerfil").Cascade.SaveUpdate();
         }
     }
 }

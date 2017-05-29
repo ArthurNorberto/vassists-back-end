@@ -6,17 +6,14 @@ using VAssists.DataTransfer.Seguranca.responses;
 
 namespace VAssistsProject.Controllers.Autenticacao
 {
-
     public class SegurancaController : ApiController
     {
         private readonly ISegurancaAppServico segurancaAppServico;
 
- 
         public SegurancaController(ISegurancaAppServico segurancaAppServico)
         {
             this.segurancaAppServico = segurancaAppServico;
         }
-
 
         [HttpPost]
         [Route("api/seguranca/cadastro")]
@@ -26,7 +23,6 @@ namespace VAssistsProject.Controllers.Autenticacao
             return Ok();
         }
 
-
         [HttpPost]
         [Route("api/seguranca/login")]
         [ResponseType(typeof(UsuarioLogadoResponse))]
@@ -34,7 +30,6 @@ namespace VAssistsProject.Controllers.Autenticacao
         {
             return Ok(segurancaAppServico.LogarNoSistema(request));
         }
-
 
         [HttpDelete]
         [Route("api/seguranca/login")]

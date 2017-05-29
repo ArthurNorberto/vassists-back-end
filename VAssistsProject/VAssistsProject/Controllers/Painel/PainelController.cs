@@ -7,17 +7,14 @@ using VAssists.DataTransfer.Painel.responses;
 
 namespace VAssistsProject.Controllers.Painel
 {
-
     public class PainelController : ApiController
     {
         private readonly IPainelAppServico painelAppServico;
-
 
         public PainelController(IPainelAppServico painelAppServico)
         {
             this.painelAppServico = painelAppServico;
         }
-
 
         [HttpGet]
         [Route("api/perfil")]
@@ -43,7 +40,6 @@ namespace VAssistsProject.Controllers.Painel
             return Ok(painelAppServico.RetornarPerfil(codigoPerfil));
         }
 
-
         [HttpPost]
         [Route("api/perfil")]
         public IHttpActionResult InserirPerfil([FromBody] InserirPerfilRequest request)
@@ -68,7 +64,6 @@ namespace VAssistsProject.Controllers.Painel
             return Ok();
         }
 
-
         [HttpGet]
         [Route("api/tipo")]
         [ResponseType(typeof(IEnumerable<TipoResponse>))]
@@ -77,15 +72,13 @@ namespace VAssistsProject.Controllers.Painel
             return Ok(painelAppServico.ListarTipo());
         }
 
-
         [HttpGet]
-        [Route("api/perfil/{codigoTipo:int}")]
+        [Route("api/tipo/{codigoTipo:int}")]
         [ResponseType(typeof(PerfilResponse))]
         public IHttpActionResult RetornarTipo([FromUri]int codigoTipo)
         {
             return Ok(painelAppServico.RetornarTipo(codigoTipo));
         }
-
 
         [HttpPost]
         [Route("api/tipo")]
@@ -96,7 +89,7 @@ namespace VAssistsProject.Controllers.Painel
         }
 
         [HttpPut]
-        [Route("api/perfil/{codigoTipo:int}")]
+        [Route("api/tipo/{codigoTipo:int}")]
         public IHttpActionResult AlterarTipo([FromUri]int codigoTipo, [FromBody] AlterarTipoRequest request)
         {
             painelAppServico.AlterarTipo(codigoTipo, request);
@@ -104,12 +97,11 @@ namespace VAssistsProject.Controllers.Painel
         }
 
         [HttpDelete]
-        [Route("api/perfil/{codigoTipo:int}")]
+        [Route("api/tipo/{codigoTipo:int}")]
         public IHttpActionResult DeletarTipo([FromUri]int codigoTipo)
         {
             painelAppServico.DeletarTipo(codigoTipo);
             return Ok();
         }
-
     }
 }

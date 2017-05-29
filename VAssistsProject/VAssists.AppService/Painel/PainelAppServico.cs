@@ -1,10 +1,10 @@
-﻿using VDominio.Painel.repositorios;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using VAssists.AppService.Painel.Interfaces;
-using VAssists.DataTransfer.Painel.responses;
-using System;
 using VAssists.DataTransfer.Painel.requests;
+using VAssists.DataTransfer.Painel.responses;
+using VAssistsInfra.Conexao;
+using VDominio.Painel.repositorios;
 
 namespace VAssists.AppService.Painel
 {
@@ -19,32 +19,93 @@ namespace VAssists.AppService.Painel
 
         public void AlterarPerfil(int codigoPerfil, AlterarPerfilRequest request)
         {
-            painelRepositorio.AlterarPerfil(codigoPerfil, request.Descricao, request.Identificacao);
+            try
+            {
+                SessionSingleton.BeginTransaction();
+                painelRepositorio.AlterarPerfil(codigoPerfil, request.Descricao, request.Identificacao);
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public void AlterarTipo(int codigoTipo, AlterarTipoRequest request)
         {
-            painelRepositorio.AlterarTipo(codigoTipo, request.Descricao, request.Identificacao);
+            try
+            {
+                SessionSingleton.BeginTransaction();
+                painelRepositorio.AlterarTipo(codigoTipo, request.Descricao, request.Identificacao);
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public void DeletarPerfil(int codigoPerfil)
         {
-            painelRepositorio.DeletarTipo(codigoPerfil);
+            try
+            {
+                SessionSingleton.BeginTransaction();
+                painelRepositorio.DeletarPerfil(codigoPerfil);
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public void DeletarTipo(int codigoTipo)
         {
-            painelRepositorio.DeletarTipo(codigoTipo);
+            try
+            {
+                SessionSingleton.BeginTransaction();
+                painelRepositorio.DeletarTipo(codigoTipo);
+
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public void InserirPerfil(InserirPerfilRequest request)
         {
-            painelRepositorio.InserirPerfil(request.Descricao, request.Identificao);
+            try
+            {
+                SessionSingleton.BeginTransaction();
+                painelRepositorio.InserirPerfil(request.Descricao, request.Identificacao);
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public void InserirTipo(InserirTipoRequest request)
         {
-            painelRepositorio.InserirTipo(request.Descricao, request.Identificao);
+            try
+            {
+                SessionSingleton.BeginTransaction();
+                painelRepositorio.InserirTipo(request.Descricao, request.Identificacao);
+                SessionSingleton.Commit();
+            }
+            catch
+            {
+                SessionSingleton.Rollback();
+                throw;
+            }
         }
 
         public IEnumerable<PerfilResponse> ListarPerfil()
@@ -53,7 +114,7 @@ namespace VAssists.AppService.Painel
             {
                 Codigo = x.IdPerfil,
                 Descricao = x.NomePerfil,
-                IDTPerfil = x.IdtPerfil
+                Identificacao = x.IdtPerfil
             });
         }
 
@@ -63,7 +124,7 @@ namespace VAssists.AppService.Painel
             {
                 Codigo = x.IdPerfil,
                 Descricao = x.NomePerfil,
-                IDTPerfil = x.IdtPerfil
+                Identificacao = x.IdtPerfil
             });
         }
 
@@ -73,7 +134,7 @@ namespace VAssists.AppService.Painel
             {
                 Codigo = x.IdTipo,
                 Descricao = x.NomeTipo,
-                IDTTipo = x.IdtTipo
+                Identificacao = x.IdtTipo
             });
         }
 
@@ -83,9 +144,9 @@ namespace VAssists.AppService.Painel
 
             PerfilResponse response = new PerfilResponse()
             {
-               Codigo = perfil.IdPerfil,
-               Descricao = perfil.NomePerfil,
-               IDTPerfil = perfil.IdtPerfil
+                Codigo = perfil.IdPerfil,
+                Descricao = perfil.NomePerfil,
+                Identificacao = perfil.IdtPerfil
             };
 
             return response;
@@ -99,9 +160,8 @@ namespace VAssists.AppService.Painel
             {
                 Codigo = perfil.IdTipo,
                 Descricao = perfil.NomeTipo,
-                IDTTipo = perfil.IdtTipo
+                Identificacao = perfil.IdtTipo
             };
-
 
             return response;
         }

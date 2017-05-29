@@ -1,4 +1,5 @@
 ﻿using Dominio.Seguranca.entidades;
+using System;
 using VDominio.Modelo;
 
 namespace VDominio.Pontos
@@ -7,8 +8,12 @@ namespace VDominio.Pontos
     {
         Ponto RetornarPonto(int codigo);
 
-        void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao);
+        void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string endereco);
+
         void DeletarPonto(int codigoPonto);
-        ListaPontos ListarPontos(string nomeUsuario, int pg, int qt);
+
+        ListaPontos ListarPontos(string nomeUsuario, DateTime? dataInicial, DateTime? dataFinal, string endereco, int codigoTipo, int pg, int qt);
+
+        ListaPontos ListarMeusPontos(int codigoUsuario, DateTime? dataInicial, DateTime? dataFinal, string endereco, int codigoTipo, int pg, int qt);
     }
 }
