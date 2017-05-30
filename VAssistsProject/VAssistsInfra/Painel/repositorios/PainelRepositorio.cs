@@ -4,11 +4,16 @@ using System.Linq;
 using VAssistsInfra.Auxiliares;
 using VDominio.Modelo;
 using VDominio.Painel.repositorios;
+using NHibernate;
 
 namespace VAssistsInfra.Painel.repositorios
 {
     public class PainelRepositorio : GenericoRepositorio, IPainelRepositorio
     {
+        public PainelRepositorio(ISession session) : base(session)
+        {
+        }
+
         public void AlterarPerfil(int codigoPerfil, string descricao, string identificacao)
         {
             var perfil = session.Query<Perfil>().Where<Perfil>(x => x.IdPerfil == codigoPerfil).FirstOrDefault();

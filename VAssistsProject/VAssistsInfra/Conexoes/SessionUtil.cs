@@ -2,18 +2,18 @@
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
+using VAssistsInfra.Conexoes.Interfaces;
 using VAssistsInfra.Modelo.Mapeamento;
 
 namespace VAssistsInfra.Conexao
 {
-    public static class SessionSingleton
+    public class SessionUtil : ISessionUtil
     {
-        private static ISessionFactory _factory;
-        private static ISession _session;
-        private static readonly string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Producao"].ConnectionString;
-        private static readonly Destructor Finalise = new Destructor();
-
-        public static ISessionFactory Factory
+        private ISessionFactory _factory;
+        private ISession _session;
+        private readonly string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Producao"].ConnectionString;
+  
+        public ISessionFactory Factory
         {
             get
             {
@@ -29,7 +29,7 @@ namespace VAssistsInfra.Conexao
             }
         }
 
-        public static ISession Session
+        public ISession Session
         {
             get
             {
@@ -41,45 +41,56 @@ namespace VAssistsInfra.Conexao
             }
         }
 
-        public static void BeginTransaction()
+        public void BeginTransaction()
         {
-            Session.BeginTransaction();
+            if (!Session.Transaction.IsActive)
+            {
+                Session.BeginTransaction();
+            }
         }
 
-        public static void Commit()
+        public void Commit()
         {
-            Session.Flush();
-            Session.Transaction.Commit();
+            if (Session.Transaction.IsActive)
+            {
+                Session.Flush();
+                Session.Transaction.Commit();
+            }
         }
 
-        public static void Close()
+        public void Close()
         {
             Session.Close();
         }
 
-        public static void Rollback()
+        public void Rollback()
         {
             if (Session.Transaction.IsActive)
             {
                 Session.Flush();
                 Session.Transaction.Rollback();
+                Session.Transaction.Dispose();
             }
         }
 
-        internal static void CloseSession()
+        public void Dispose()
+        {
+            if (Session.Transaction.IsActive)
+            {
+                Session.Transaction.Dispose();
+            }
+        }
+
+        internal void CloseSession()
         {
             _session.Close();
-            _session.Connection.Close();
             _session = null;
         }
 
-        private sealed class Destructor
+        ~SessionUtil()
         {
-            ~Destructor()
-            {
-                // One time only destructor.
-                SessionSingleton.CloseSession();
-            }
+            // One time only destructor.
+            CloseSession();
         }
     }
 }

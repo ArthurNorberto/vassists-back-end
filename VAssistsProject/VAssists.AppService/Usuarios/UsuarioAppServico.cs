@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Linq;
+using VAssists.AppService.Auxiliares;
+using VAssists.AppService.Auxiliares.Interfaces;
 using VAssists.AppService.Usuarios.Interfaces;
 using VAssists.DataTransfer.Usuarios.requests;
 using VAssists.DataTransfer.Usuarios.responses;
 using VAssistsInfra.Conexao;
+using VAssistsInfra.Painel.repositorios;
+using VAssistsInfra.Usuarios.repositorios;
 using VDominio.Painel.repositorios;
 using VDominio.Usuarios.repositorios;
 
 namespace VAssists.AppService.Usuarios
 {
-    public class UsuarioAppServico : IUsuarioAppServico
+    public class UsuarioAppServico : GenericoAppServico, IUsuarioAppServico
     {
         private readonly IUsuarioRepositorio usuarioRepositorio;
         private readonly IPainelRepositorio painelRepositorio;
 
-        public UsuarioAppServico(IUsuarioRepositorio usuarioRepositorio, IPainelRepositorio painelRepositorio)
+        public UsuarioAppServico(IUnitOfWork unitOfWork/*, IUsuarioRepositorio usuarioRepositorio, IPainelRepositorio painelRepositorio*/) : base(unitOfWork)
         {
-            this.usuarioRepositorio = usuarioRepositorio;
-            this.painelRepositorio = painelRepositorio;
+            // this.usuarioRepositorio = usuarioRepositorio;
+            //this.painelRepositorio = painelRepositorio;
+             this.usuarioRepositorio = new UsuarioRepositorio(unitOfWork.Session);
+            this.painelRepositorio = new PainelRepositorio(unitOfWork.Session);
         }
 
         public void AlterarSenha(int codigoUsuario, AlterarSenhaRequest request)
@@ -34,16 +40,20 @@ namespace VAssists.AppService.Usuarios
 
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
 
                 usuarioRepositorio.AlterarSenha(codigoUsuario, request.SenhaNova);
 
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -51,18 +61,22 @@ namespace VAssists.AppService.Usuarios
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
 
                 var perfil = painelRepositorio.RetornarPerfil(request.CodigoPerfil);
 
                 usuarioRepositorio.AlterarUsuario(perfil, codigoUsuario, request.Email, request.Nome);
 
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -70,17 +84,21 @@ namespace VAssists.AppService.Usuarios
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 var perfil = painelRepositorio.RetornarPerfil(request.CodigoPerfil);
 
                 usuarioRepositorio.CadastrarUsuario(perfil, request.Email, request.Nome);
 
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -88,73 +106,110 @@ namespace VAssists.AppService.Usuarios
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
 
                 usuarioRepositorio.ExcluirUsuario(codigoUsuario);
 
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
         public UsuarioComPaginacaoResponse ListarUsuarios(ListarUsuariosRequest request)
         {
-            var resultado = usuarioRepositorio.ListarUsuarios(request.Nome, request.Email, request.CodigoPerfil, request.pg, request.qt);
-
-            UsuarioComPaginacaoResponse response = new UsuarioComPaginacaoResponse()
+            try
             {
-                quantidade = resultado.quantidade,
-                pagina = resultado.pagina,
-                usuarios = resultado.usuarios.Select(t => new UsuarioResponse
-                {
-                    CodigoUsuario = t.IdUsuario,
-                    DataUltimoLogin = t.Dataultimologin,
-                    Email = t.Email,
-                    Nome = t.NomeUsuario,
-                    Perfil = t.Perfil.NomePerfil
-                })
-            };
+                 
+                var resultado = usuarioRepositorio.ListarUsuarios(request.Nome, request.Email, request.CodigoPerfil, request.pg, request.qt);
 
-            return response;
+                UsuarioComPaginacaoResponse response = new UsuarioComPaginacaoResponse()
+                {
+                    quantidade = resultado.quantidade,
+                    pagina = resultado.pagina,
+                    usuarios = resultado.usuarios.Select(t => new UsuarioResponse
+                    {
+                        CodigoUsuario = t.IdUsuario,
+                        DataUltimoLogin = t.Dataultimologin,
+                        Email = t.Email,
+                        Nome = t.NomeUsuario,
+                        Perfil = t.Perfil.NomePerfil
+                    })
+                };
+
+             
+                return response;
+            }
+            catch
+            {
+                unitOfWork.Rollback();
+                throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
+            }
         }
 
         public void ResetarSenha(int codigoUsuario)
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
 
                 usuarioRepositorio.ResetarSenha(codigoUsuario);
 
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
         public UsuarioResponse RetornaUsuario(int codigoUsuario)
         {
-            var result = usuarioRepositorio.RetornaUsuario(codigoUsuario);
-
-            UsuarioResponse usuario = new UsuarioResponse()
+            try
             {
-                CodigoUsuario = result.IdUsuario,
-                Nome = result.NomeUsuario,
-                DataUltimoLogin = result.Dataultimologin,
-                Email = result.Email,
-                Perfil = result.Perfil.NomePerfil,
-                Identificacao = result.Perfil.IdtPerfil,
-                CodigoPerfil = result.Perfil.IdPerfil
-            };
+           
 
-            return usuario;
+                var result = usuarioRepositorio.RetornaUsuario(codigoUsuario);
+
+                UsuarioResponse response = new UsuarioResponse()
+                {
+                    CodigoUsuario = result.IdUsuario,
+                    Nome = result.NomeUsuario,
+                    DataUltimoLogin = result.Dataultimologin,
+                    Email = result.Email,
+                    Perfil = result.Perfil.NomePerfil,
+                    Identificacao = result.Perfil.IdtPerfil,
+                    CodigoPerfil = result.Perfil.IdPerfil
+                };
+
+          
+                return response;
+            }
+            catch
+            {
+                unitOfWork.Rollback();
+                throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
+            }
         }
     }
 }

@@ -19,7 +19,20 @@ namespace VAssistsInfra.Modelo.Mapeamento
 
             Map(x => x.Observacao).Not.Nullable();
 
+            Map(x => x.Bairro).Not.Nullable();
+
+            Map(x => x.Cidade).Not.Nullable();
+
+            Map(x => x.Estado).Not.Nullable();
+
+            Map(x => x.Pais).Not.Nullable();
+
+            Map(x => x.CEP).Not.Nullable();
+
             Map(x => x.Endereco).Not.Nullable();
+
+            Map(x => x.EnderecoCompleto).Not.Nullable();
+
 
             References(x => x.Tipo).Column("IdTipo").Cascade.SaveUpdate();
             References(x => x.Usuario).Column("IdUsuario").Cascade.SaveUpdate();

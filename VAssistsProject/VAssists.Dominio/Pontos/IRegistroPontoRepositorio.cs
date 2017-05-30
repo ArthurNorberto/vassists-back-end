@@ -8,7 +8,7 @@ namespace VDominio.Pontos
     {
         Ponto RetornarPonto(int codigo);
 
-        void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string endereco);
+        void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string enderecoCompleto, string[] enderecos);
 
         void DeletarPonto(int codigoPonto);
 

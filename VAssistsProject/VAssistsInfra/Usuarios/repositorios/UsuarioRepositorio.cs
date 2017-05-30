@@ -5,17 +5,22 @@ using System.Security.Cryptography;
 using VAssistsInfra.Auxiliares;
 using VDominio.Modelo;
 using VDominio.Usuarios.repositorios;
+using NHibernate;
 
 namespace VAssistsInfra.Usuarios.repositorios
 {
     public class UsuarioRepositorio : GenericoRepositorio, IUsuarioRepositorio
     {
+        public UsuarioRepositorio(ISession session) : base(session)
+        {
+        }
+
         public void AlterarSenha(int codigoUsuario, string senhaNova)
         {
             string hash;
             using (MD5 md5Hash = MD5.Create())
             {
-                hash = ConfigMD5.GetMd5Hash(md5Hash, "123456");
+                hash = ConfigMD5.GetMd5Hash(md5Hash, senhaNova);
             }
 
             var usuario = session.Query<Usuario>().Where(x => x.IdUsuario == codigoUsuario).FirstOrDefault();

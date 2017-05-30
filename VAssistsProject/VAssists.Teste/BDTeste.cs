@@ -28,13 +28,14 @@ namespace VAssists.Teste
         [Test]
         public void TesteDeConexaoNHibernate()
         {
-            var a = SessionSingleton.Session;
+            
+            var a =  new SessionUtil().Session;
         }
 
         [Test]
         public void TesteSelect()
         {
-            using (ISession session = SessionSingleton.Session)
+            using (ISession session = new SessionUtil().Session)
             {
                 var query = session.CreateSQLQuery("SELECT COUNT(1) QTD FROM USUARIO");
                 var resultado = query.UniqueResult();
@@ -48,7 +49,7 @@ namespace VAssists.Teste
         {
             int atual = 0;
             int resultado = 0;
-            using (ISession session = SessionSingleton.Session)
+            using (ISession session = new SessionUtil().Session)
             {
                 using (ITransaction transaction = session.BeginTransaction())
                 {

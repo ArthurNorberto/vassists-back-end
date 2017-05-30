@@ -1,33 +1,41 @@
 ﻿using System;
+using VAssists.AppService.Auxiliares;
+using VAssists.AppService.Auxiliares.Interfaces;
 using VAssists.AppService.Seguranca.Interfaces;
 using VAssists.DataTransfer.Seguranca.requests;
 using VAssists.DataTransfer.Seguranca.responses;
 using VAssistsInfra.Conexao;
+using VAssistsInfra.Seguranca.repositorios;
 using VDominio.Seguranca.repositorios;
 
 namespace VAssists.AppService.Seguranca
 {
-    public class SegurancaAppServico : ISegurancaAppServico
+    public class SegurancaAppServico : GenericoAppServico, ISegurancaAppServico
     {
         private readonly ISegurancaRepositorio segurancaRepositorio;
 
-        public SegurancaAppServico(ISegurancaRepositorio segurancaRepositorio)
+        public SegurancaAppServico(IUnitOfWork unitOfWork/*, ISegurancaRepositorio segurancaRepositorio*/) : base(unitOfWork)
         {
-            this.segurancaRepositorio = segurancaRepositorio;
+            //this.segurancaRepositorio = segurancaRepositorio;
+            this.segurancaRepositorio = new SegurancaRepositorio(unitOfWork.Session);
         }
 
         public void CadastroSistema(CadastroUsuarioRequest request)
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 segurancaRepositorio.CadastroSistema(request.Nome, request.Email, request.CodigoPerfil);
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -39,7 +47,7 @@ namespace VAssists.AppService.Seguranca
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 var usuario = segurancaRepositorio.LogarNoSistema(request.Login, request.Senha);
 
                 if (usuario == null)
@@ -55,14 +63,18 @@ namespace VAssists.AppService.Seguranca
 
                 segurancaRepositorio.InserirDataLogin(usuario.IdUsuario);
 
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
 
                 return response;
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
     }

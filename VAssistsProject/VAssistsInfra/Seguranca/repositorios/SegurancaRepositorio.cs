@@ -6,11 +6,16 @@ using System.Security.Cryptography;
 using VAssistsInfra.Auxiliares;
 using VDominio.Modelo;
 using VDominio.Seguranca.repositorios;
+using NHibernate;
 
 namespace VAssistsInfra.Seguranca.repositorios
 {
     public class SegurancaRepositorio : GenericoRepositorio, ISegurancaRepositorio
     {
+        public SegurancaRepositorio(ISession session) : base(session)
+        {
+        }
+
         public void CadastroSistema(string nome, string email, int codigoPerfil)
         {
             using (MD5 md5Hash = MD5.Create())

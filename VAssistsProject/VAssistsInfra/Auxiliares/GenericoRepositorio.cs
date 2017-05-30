@@ -5,6 +5,12 @@ namespace VAssistsInfra.Auxiliares
 {
     public abstract class GenericoRepositorio
     {
-        protected readonly ISession session = SessionSingleton.Session;
+        protected readonly ISession session;
+
+        public GenericoRepositorio(ISession session)
+        {
+            this.session = session;
+        }
+
     }
 }

@@ -53,7 +53,8 @@
   <ItemGroup>
     <Compile Include="Auxiliares\ConfigMD5.cs" />
     <Compile Include="Auxiliares\GenericoRepositorio.cs" />
-    <Compile Include="Conexoes\SessionSingleton.cs" />
+    <Compile Include="Conexoes\Interfaces\ISessionUtil.cs" />
+    <Compile Include="Conexoes\SessionUtil.cs" />
     <Compile Include="Mapeamento\MensagemMap.cs" />
     <Compile Include="Mapeamento\PerfilMap.cs" />
     <Compile Include="Mapeamento\PontoMap.cs" />

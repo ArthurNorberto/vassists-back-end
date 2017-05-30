@@ -1,4 +1,5 @@
 ﻿using Dominio.Seguranca.entidades;
+using NHibernate;
 using NHibernate.Linq;
 using System;
 using System.Linq;
@@ -10,6 +11,10 @@ namespace VAssistsInfra.Pontos.repositorios
 {
     public class RegistroPontoRepositorio : GenericoRepositorio, IRegistroPontoRepositorio
     {
+        public RegistroPontoRepositorio(ISession session) : base(session)
+        {
+        }
+
         public void DeletarPonto(int codigoPonto)
         {
             var ponto = session.Query<Ponto>().Where<Ponto>(x => x.IdPonto == codigoPonto).FirstOrDefault();
@@ -29,6 +34,11 @@ namespace VAssistsInfra.Pontos.repositorios
                 query = query.Where(x => x.Usuario.IdUsuario == codigoUsuario);
             }
 
+            if (codigoTipo != 0)
+            {
+                query = query.Where(x => x.Tipo.IdTipo == codigoTipo);
+            }
+
             if (dataInicial != null)
             {
                 query = query.Where(x => x.DataCadastrado >= dataInicial);
@@ -41,7 +51,7 @@ namespace VAssistsInfra.Pontos.repositorios
 
             if (!string.IsNullOrEmpty(endereco))
             {
-                query = query.Where(x => x.Endereco.ToUpper().Like(endereco.ToUpper()));
+                query = query.Where(x => x.EnderecoCompleto.ToUpper().Like("%" + endereco.ToUpper() + "%"));
             }
 
             var result = query.Skip(pagina * qt).Take(qt).ToList();
@@ -94,7 +104,7 @@ namespace VAssistsInfra.Pontos.repositorios
             return response;
         }
 
-        public void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string endereco)
+        public void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string enderecoCompleto, string[] enderecos)
         {
             Ponto ponto = new Ponto
             {
@@ -104,7 +114,13 @@ namespace VAssistsInfra.Pontos.repositorios
                 Observacao = observacao,
                 Tipo = tipo,
                 Usuario = usuario,
-                Endereco = endereco
+                EnderecoCompleto = enderecoCompleto,
+                Endereco = enderecos[1].Trim(),
+                CEP = enderecos[3].Trim(),
+                Bairro = enderecos[5].Trim(),
+                Cidade = enderecos[7].Trim(),
+                Estado = enderecos[9].Trim(),
+                Pais = enderecos[11].Trim()
             };
 
             session.Save(ponto);

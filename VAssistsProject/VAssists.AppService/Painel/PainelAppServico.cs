@@ -1,34 +1,42 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using VAssists.AppService.Auxiliares;
+using VAssists.AppService.Auxiliares.Interfaces;
 using VAssists.AppService.Painel.Interfaces;
 using VAssists.DataTransfer.Painel.requests;
 using VAssists.DataTransfer.Painel.responses;
 using VAssistsInfra.Conexao;
+using VAssistsInfra.Painel.repositorios;
 using VDominio.Painel.repositorios;
 
 namespace VAssists.AppService.Painel
 {
-    public class PainelAppServico : IPainelAppServico
+    public class PainelAppServico : GenericoAppServico, IPainelAppServico
     {
         private readonly IPainelRepositorio painelRepositorio;
 
-        public PainelAppServico(IPainelRepositorio painelRepositorio)
+        public PainelAppServico(IUnitOfWork unitOfWork/*, IPainelRepositorio painelRepositorio*/) : base(unitOfWork)
         {
-            this.painelRepositorio = painelRepositorio;
+            // this.painelRepositorio = painelRepositorio;
+            this.painelRepositorio = new PainelRepositorio(unitOfWork.Session);
         }
 
         public void AlterarPerfil(int codigoPerfil, AlterarPerfilRequest request)
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 painelRepositorio.AlterarPerfil(codigoPerfil, request.Descricao, request.Identificacao);
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -36,14 +44,18 @@ namespace VAssists.AppService.Painel
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 painelRepositorio.AlterarTipo(codigoTipo, request.Descricao, request.Identificacao);
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -51,14 +63,18 @@ namespace VAssists.AppService.Painel
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 painelRepositorio.DeletarPerfil(codigoPerfil);
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -66,15 +82,19 @@ namespace VAssists.AppService.Painel
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 painelRepositorio.DeletarTipo(codigoTipo);
 
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -82,14 +102,18 @@ namespace VAssists.AppService.Painel
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 painelRepositorio.InserirPerfil(request.Descricao, request.Identificacao);
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
@@ -97,73 +121,143 @@ namespace VAssists.AppService.Painel
         {
             try
             {
-                SessionSingleton.BeginTransaction();
+                unitOfWork.BeginTransaction();
                 painelRepositorio.InserirTipo(request.Descricao, request.Identificacao);
-                SessionSingleton.Commit();
+                unitOfWork.Commit();
             }
             catch
             {
-                SessionSingleton.Rollback();
+                unitOfWork.Rollback();
                 throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
             }
         }
 
         public IEnumerable<PerfilResponse> ListarPerfil()
         {
-            return painelRepositorio.ListarPerfil().Select(x => new PerfilResponse
+            try
             {
-                Codigo = x.IdPerfil,
-                Descricao = x.NomePerfil,
-                Identificacao = x.IdtPerfil
-            });
+                var response = painelRepositorio.ListarPerfil().Select(x => new PerfilResponse
+                {
+                    Codigo = x.IdPerfil,
+                    Descricao = x.NomePerfil,
+                    Identificacao = x.IdtPerfil
+                });
+
+                return response;
+            }
+            catch
+            {
+                unitOfWork.Rollback();
+                throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
+            }
         }
 
         public IEnumerable<PerfilResponse> ListarPerfilSemAdmin()
         {
-            return painelRepositorio.ListarPerfilSemAdmin().Select(x => new PerfilResponse
+            try
             {
-                Codigo = x.IdPerfil,
-                Descricao = x.NomePerfil,
-                Identificacao = x.IdtPerfil
-            });
+                var response = painelRepositorio.ListarPerfilSemAdmin().Select(x => new PerfilResponse
+                {
+                    Codigo = x.IdPerfil,
+                    Descricao = x.NomePerfil,
+                    Identificacao = x.IdtPerfil
+                });
+
+                return response;
+            }
+            catch
+            {
+                unitOfWork.Rollback();
+                throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
+            }
         }
 
         public IEnumerable<TipoResponse> ListarTipo()
         {
-            return painelRepositorio.ListarTipo().Select(x => new TipoResponse
+            try
             {
-                Codigo = x.IdTipo,
-                Descricao = x.NomeTipo,
-                Identificacao = x.IdtTipo
-            });
+                var response = painelRepositorio.ListarTipo().Select(x => new TipoResponse
+                {
+                    Codigo = x.IdTipo,
+                    Descricao = x.NomeTipo,
+                    Identificacao = x.IdtTipo
+                });
+
+                return response;
+            }
+            catch
+            {
+                unitOfWork.Rollback();
+                throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
+            }
         }
 
         public PerfilResponse RetornarPerfil(int codigoPerfil)
         {
-            var perfil = painelRepositorio.RetornarPerfil(codigoPerfil);
-
-            PerfilResponse response = new PerfilResponse()
+            try
             {
-                Codigo = perfil.IdPerfil,
-                Descricao = perfil.NomePerfil,
-                Identificacao = perfil.IdtPerfil
-            };
+                var perfil = painelRepositorio.RetornarPerfil(codigoPerfil);
 
-            return response;
+                PerfilResponse response = new PerfilResponse()
+                {
+                    Codigo = perfil.IdPerfil,
+                    Descricao = perfil.NomePerfil,
+                    Identificacao = perfil.IdtPerfil
+                };
+
+                return response;
+            }
+            catch
+            {
+                unitOfWork.Rollback();
+                throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
+            }
         }
 
         public TipoResponse RetornarTipo(int codigoTipo)
         {
-            var perfil = painelRepositorio.RetornarTipo(codigoTipo);
-
-            TipoResponse response = new TipoResponse()
+            try
             {
-                Codigo = perfil.IdTipo,
-                Descricao = perfil.NomeTipo,
-                Identificacao = perfil.IdtTipo
-            };
+                var perfil = painelRepositorio.RetornarTipo(codigoTipo);
 
-            return response;
+                TipoResponse response = new TipoResponse()
+                {
+                    Codigo = perfil.IdTipo,
+                    Descricao = perfil.NomeTipo,
+                    Identificacao = perfil.IdtTipo
+                };
+
+                return response;
+            }
+            catch
+            {
+                unitOfWork.Rollback();
+                throw;
+            }
+            finally
+            {
+                unitOfWork.Dispose();
+            }
         }
     }
 }
