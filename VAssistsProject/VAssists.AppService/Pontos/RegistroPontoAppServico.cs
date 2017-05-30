@@ -13,6 +13,7 @@ using VAssists.AppService.Auxiliares.Interfaces;
 using VAssistsInfra.Pontos.repositorios;
 using VAssistsInfra.Usuarios.repositorios;
 using VAssistsInfra.Painel.repositorios;
+using VDominio.Pontos.repositorios;
 
 namespace VAssists.AppService.Pontos
 {
@@ -56,25 +57,27 @@ namespace VAssists.AppService.Pontos
             try
             {
                 unitOfWork.BeginTransaction();
-                var resultado = registroPontoRepositorio.ListarMeusPontos(request.CodigoUsuario, request.DataInicial, request.DataFinal, request.Endereco, request.CodigoTipo, request.pg, request.qt);
+                var retorno = registroPontoRepositorio.ListarMeusPontos(request.CodigoUsuario, request.DataInicial, request.DataFinal, request.Endereco, request.CodigoTipo, request.pg, request.qt);
 
                 PontosComPaginacaoResponse response = new PontosComPaginacaoResponse()
                 {
-                    quantidade = resultado.quantidade,
-                    pagina = resultado.pagina,
-                    pontos = resultado.pontos.Select(t => new PontoResponse
+                    quantidade = retorno.quantidade,
+                    pagina = retorno.pagina,
+                    pontos = retorno.pontos.Select(resultado => new PontoResponse
                     {
-                        Codigo = t.IdPonto,
-                        DataCadastrado = t.DataCadastrado,
-                        DataRespondido = t.DataRespondido,
-                        NomeUsuario = t.Usuario.NomeUsuario,
-                        Latitude = t.Latitude,
-                        Longitude = t.Longitude,
-                        Tipo = t.Tipo.NomeTipo,
-                        EnderecoCompleto = t.EnderecoCompleto,
-                        Endereco = t.Endereco,
-                        Bairro = t.Bairro,
-                        Cidade = t.Cidade
+                        Codigo = resultado.IdPonto,
+                        DataCadastrado = resultado.DataCadastrado,
+                        DataRespondido = resultado.DataRespondido,
+                        NomeUsuario = resultado.Usuario.NomeUsuario,
+                        Email = resultado.Usuario.Email,
+                        Latitude = resultado.Latitude,
+                        Longitude = resultado.Longitude,
+                        Tipo = resultado.Tipo.NomeTipo,
+                        EnderecoCompleto = resultado.EnderecoCompleto,
+                        Cidade = resultado.Cidade,
+                        Pais = resultado.Pais,
+                        Estado = resultado.Estado,
+                        Observacao = resultado.Observacao
                     })
                 };
 
@@ -97,25 +100,27 @@ namespace VAssists.AppService.Pontos
             try
             {
        
-                var resultado = registroPontoRepositorio.ListarPontos(request.NomeUsuario, request.DataInicial, request.DataFinal, request.Endereco, request.CodigoTipo, request.pg, request.qt);
+                var retorno = registroPontoRepositorio.ListarPontos(request.NomeUsuario, request.DataInicial, request.DataFinal, request.Endereco, request.CodigoTipo, request.pg, request.qt);
 
                 PontosComPaginacaoResponse response = new PontosComPaginacaoResponse()
                 {
-                    quantidade = resultado.quantidade,
-                    pagina = resultado.pagina,
-                    pontos = resultado.pontos.Select(t => new PontoResponse
+                    quantidade = retorno.quantidade,
+                    pagina = retorno.pagina,
+                    pontos = retorno.pontos.Select(resultado => new PontoResponse
                     {
-                        Codigo = t.IdPonto,
-                        DataCadastrado = t.DataCadastrado,
-                        DataRespondido = t.DataRespondido,
-                        NomeUsuario = t.Usuario.NomeUsuario,
-                        Latitude = t.Latitude,
-                        Longitude = t.Longitude,
-                        Tipo = t.Tipo.NomeTipo,
-                        EnderecoCompleto = t.EnderecoCompleto,
-                        Endereco = t.Endereco,
-                        Bairro = t.Bairro,
-                        Cidade = t.Cidade
+                        Codigo = resultado.IdPonto,
+                        DataCadastrado = resultado.DataCadastrado,
+                        DataRespondido = resultado.DataRespondido,
+                        NomeUsuario = resultado.Usuario.NomeUsuario,
+                        Email = resultado.Usuario.Email,
+                        Latitude = resultado.Latitude,
+                        Longitude = resultado.Longitude,
+                        Tipo = resultado.Tipo.NomeTipo,
+                        EnderecoCompleto = resultado.EnderecoCompleto,
+                        Cidade = resultado.Cidade,
+                        Pais = resultado.Pais,
+                        Estado = resultado.Estado,
+                        Observacao = resultado.Observacao
 
                     })
                 };
@@ -136,9 +141,6 @@ namespace VAssists.AppService.Pontos
 
         public void RegistrarPonto(RegistrarPontoRequest request)
         {
-            string pattern = "(.+?)(?:,|(?:- )|$)";
-            string[] enderecos = Regex.Split(request.Endereco, pattern);
-
 
             try
             {
@@ -149,7 +151,7 @@ namespace VAssists.AppService.Pontos
 
 
 
-                registroPontoRepositorio.RegistrarPonto(usuario, request.Latitude, request.Longitude, tipo, request.Observacao, request.Endereco, enderecos);
+                registroPontoRepositorio.RegistrarPonto(usuario, request.Latitude, request.Longitude, tipo, request.Observacao, request.Endereco, request.Cidade, request.Estado, request.Pais);
 
                 unitOfWork.Commit();
             }
@@ -178,13 +180,14 @@ namespace VAssists.AppService.Pontos
                     DataCadastrado = resultado.DataCadastrado,
                     DataRespondido = resultado.DataRespondido,
                     NomeUsuario = resultado.Usuario.NomeUsuario,
+                    Email = resultado.Usuario.Email,
                     Latitude = resultado.Latitude,
                     Longitude = resultado.Longitude,
                     Tipo = resultado.Tipo.NomeTipo,
                     EnderecoCompleto = resultado.EnderecoCompleto,
-                    Endereco = resultado.Endereco,
-                    Bairro = resultado.Bairro,
                     Cidade = resultado.Cidade,
+                    Pais = resultado.Pais,
+                    Estado = resultado.Estado,
                     Observacao = resultado.Observacao
                 };
 

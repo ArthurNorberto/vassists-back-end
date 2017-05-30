@@ -40,15 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estatisticas\entidades\EstatisticasPonto.cs" />
+    <Compile Include="Estatisticas\entidades\EstatisticasUsuario.cs" />
+    <Compile Include="Estatisticas\repositorios\IEstatisticasRepositorio.cs" />
+    <Compile Include="Mensagens\entidades\ListaMensagens.cs" />
+    <Compile Include="Mensagens\repositorios\IMensagensRepositorio.cs" />
     <Compile Include="Modelo\Mensagem.cs" />
     <Compile Include="Modelo\Perfil.cs" />
     <Compile Include="Modelo\Ponto.cs" />
     <Compile Include="Modelo\Resposta.cs" />
     <Compile Include="Modelo\Tipo.cs" />
     <Compile Include="Painel\repositorios\IPainelRepositorio.cs" />
-    <Compile Include="Pontos\IRegistroPontoRepositorio.cs" />
+    <Compile Include="Pontos\repositorios\IRegistroPontoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Respostas\repositorios\IRespostaRepositorio.cs" />
     <Compile Include="Seguranca\entidades\ListaPontos.cs" />
     <Compile Include="Seguranca\repositorios\ISegurancaRepositorio.cs" />
     <Compile Include="Usuarios\entidades\ListaUsuarios.cs" />

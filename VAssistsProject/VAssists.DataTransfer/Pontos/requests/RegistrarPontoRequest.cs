@@ -8,5 +8,8 @@
         public int CodigoTipo { get; set; }
         public string Observacao { get; set; }
         public string Endereco { get; set; }
+        public string Cidade { get; set; }
+        public string Estado { get; set; }
+        public string Pais { get; set; }
     }
 }

@@ -55,15 +55,18 @@
     <Compile Include="Auxiliares\GenericoRepositorio.cs" />
     <Compile Include="Conexoes\Interfaces\ISessionUtil.cs" />
     <Compile Include="Conexoes\SessionUtil.cs" />
+    <Compile Include="Estatisticas\repositorios\EstatisticasRepositorio.cs" />
     <Compile Include="Mapeamento\MensagemMap.cs" />
     <Compile Include="Mapeamento\PerfilMap.cs" />
     <Compile Include="Mapeamento\PontoMap.cs" />
     <Compile Include="Mapeamento\RespostaMap.cs" />
     <Compile Include="Mapeamento\TipoMap.cs" />
     <Compile Include="Mapeamento\UsuarioMap.cs" />
+    <Compile Include="Mensagens\repositorios\MensagensRepositorio.cs" />
     <Compile Include="Painel\repositorios\PainelRepositorio.cs" />
     <Compile Include="Pontos\repositorios\RegistroPontoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respostas\repositorios\RespostaRepositorio.cs" />
     <Compile Include="Seguranca\repositorios\SegurancaRepositorio.cs" />
     <Compile Include="Usuarios\repositorios\UsuarioRepositorio.cs" />
   </ItemGroup>

@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estatisticas\responses\EstatisticaPontosResponse.cs" />
+    <Compile Include="Estatisticas\responses\EstatisticaUsuarioResponse.cs" />
+    <Compile Include="Mensagens\requests\InserirMensagemRequest.cs" />
+    <Compile Include="Mensagens\requests\ListarMensagensRequest.cs" />
+    <Compile Include="Mensagens\responses\MensagemResponse.cs" />
+    <Compile Include="Mensagens\responses\MensagensPaginacaoResponse.cs" />
     <Compile Include="Painel\requests\AlterarPerfilRequest.cs" />
     <Compile Include="Painel\requests\AlterarTipoRequest.cs" />
     <Compile Include="Painel\requests\InserirPerfilRequest.cs" />
@@ -52,6 +58,8 @@
     <Compile Include="Pontos\responses\PontoResponse.cs" />
     <Compile Include="Pontos\responses\PontosComPaginacaoResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respostas\requests\InserirRespostaRequest.cs" />
+    <Compile Include="Respostas\responses\RespostaResponse.cs" />
     <Compile Include="Seguranca\requests\CadastroUsuarioRequest.cs" />
     <Compile Include="Seguranca\requests\LoginSistemaRequest.cs" />
     <Compile Include="Seguranca\responses\UsuarioLogadoResponse.cs" />
@@ -62,7 +70,9 @@
     <Compile Include="Usuarios\responses\UsuarioComPaginacaoResponse.cs" />
     <Compile Include="Usuarios\responses\UsuarioResponse.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Estatisticas\requests\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

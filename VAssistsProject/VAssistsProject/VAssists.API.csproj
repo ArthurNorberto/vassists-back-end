@@ -309,9 +309,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Autenticacao\SegurancaController.cs" />
+    <Compile Include="Controllers\Estatisticas\EstatisticasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Mensagens\MensagensController.cs" />
     <Compile Include="Controllers\Painel\PainelController.cs" />
     <Compile Include="Controllers\Ponto\RegistroPontoController.cs" />
+    <Compile Include="Controllers\Respostas\RespostaController.cs" />
     <Compile Include="Controllers\Usuario\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -399,6 +402,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Estatisticas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

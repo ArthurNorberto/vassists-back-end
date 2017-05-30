@@ -6,6 +6,7 @@ using System.Linq;
 using VAssistsInfra.Auxiliares;
 using VDominio.Modelo;
 using VDominio.Pontos;
+using VDominio.Pontos.repositorios;
 
 namespace VAssistsInfra.Pontos.repositorios
 {
@@ -87,7 +88,7 @@ namespace VAssistsInfra.Pontos.repositorios
 
             if (!string.IsNullOrEmpty(endereco))
             {
-                query = query.Where(x => x.Endereco.ToUpper().Like("%" + endereco.ToUpper() + "%"));
+                query = query.Where(x => x.EnderecoCompleto.ToUpper().Like("%" + endereco.ToUpper() + "%"));
             }
 
             if (codigoTipo != 0)
@@ -104,7 +105,7 @@ namespace VAssistsInfra.Pontos.repositorios
             return response;
         }
 
-        public void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string enderecoCompleto, string[] enderecos)
+        public void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string enderecoCompleto, string cidade, string estado, string pais)
         {
             Ponto ponto = new Ponto
             {
@@ -115,12 +116,9 @@ namespace VAssistsInfra.Pontos.repositorios
                 Tipo = tipo,
                 Usuario = usuario,
                 EnderecoCompleto = enderecoCompleto,
-                Endereco = enderecos[1].Trim(),
-                CEP = enderecos[3].Trim(),
-                Bairro = enderecos[5].Trim(),
-                Cidade = enderecos[7].Trim(),
-                Estado = enderecos[9].Trim(),
-                Pais = enderecos[11].Trim()
+                Cidade = cidade,
+                Estado =estado,
+                Pais = pais
             };
 
             session.Save(ponto);

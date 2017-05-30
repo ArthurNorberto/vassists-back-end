@@ -2,13 +2,13 @@
 using System;
 using VDominio.Modelo;
 
-namespace VDominio.Pontos
+namespace VDominio.Pontos.repositorios
 {
     public interface IRegistroPontoRepositorio
     {
         Ponto RetornarPonto(int codigo);
 
-        void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string enderecoCompleto, string[] enderecos);
+        void RegistrarPonto(Usuario usuario, decimal latitude, decimal longitude, Tipo tipo, string observacao, string enderecoCompleto, string cidade, string estado, string pais);
 
         void DeletarPonto(int codigoPonto);
 

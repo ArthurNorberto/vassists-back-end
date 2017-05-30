@@ -12,5 +12,6 @@ C:\Git\vassists-back-end\VAssistsProject\Domínio\obj\Debug\Domínio.dll
 C:\Git\vassists-back-end\VAssistsProject\Domínio\obj\Debug\Domínio.pdb
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Dominio.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\bin\Debug\Dominio.pdb
+C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Debug\VAssists.Dominio.csprojResolveAssemblyReference.cache
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Debug\Dominio.dll
 C:\Git\vassists-back-end\VAssistsProject\VAssists.Dominio\obj\Debug\Dominio.pdb

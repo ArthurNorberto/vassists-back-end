@@ -43,11 +43,18 @@ namespace VAssistsInfra.Usuarios.repositorios
 
         public void CadastrarUsuario(Perfil perfil, string email, string nome)
         {
+            string hash;
+            using (MD5 md5Hash = MD5.Create())
+            {
+                hash = ConfigMD5.GetMd5Hash(md5Hash, "123456");
+            }
+
             Usuario usuario = new Usuario()
             {
                 Perfil = perfil,
                 Email = email,
-                NomeUsuario = nome
+                NomeUsuario = nome,
+                Senha = hash
             };
 
             session.Save(usuario);
