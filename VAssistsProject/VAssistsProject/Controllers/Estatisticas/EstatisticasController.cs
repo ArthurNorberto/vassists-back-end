@@ -19,7 +19,7 @@ namespace VAssistsProject.Controllers.Estatisicas
         }
 
         [HttpGet]
-        [Route("api/estatisticas/usuarios")]
+        [Route("api/estatistica/usuario")]
         [ResponseType(typeof(IEnumerable<EstatisticaUsuarioResponse>))]
         public IHttpActionResult EstatisticasUsuarios()
         {
@@ -28,7 +28,7 @@ namespace VAssistsProject.Controllers.Estatisicas
 
 
         [HttpGet]
-        [Route("api/estatisticas/pontos")]
+        [Route("api/estatistica/ponto")]
         [ResponseType(typeof(IEnumerable<EstatisticaPontosResponse>))]
         public IHttpActionResult EstatisticasPontos()
         {

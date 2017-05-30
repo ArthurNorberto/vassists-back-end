@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Web.Http;
 using System.Web.Http.Description;
 using VAssists.AppService.Estatisticas.interfaces;
 using VAssists.AppService.Mensagens.interfaces;
@@ -25,6 +26,14 @@ namespace VAssistsProject.Controllers.Mensagens
         public IHttpActionResult ListarMensagens([FromUri] ListarMensagensRequest request)
         {
             return Ok(mensagensAppServico.ListarMensagens(request));
+        }
+
+        [HttpGet]
+        [Route("api/mensagem/ultimas")]
+        [ResponseType(typeof(IEnumerable<MensagemResponse>))]
+        public IHttpActionResult ListarUltimasMensagens()
+        {
+            return Ok(mensagensAppServico.ListarUltimasMensagens());
         }
 
         [HttpPost]

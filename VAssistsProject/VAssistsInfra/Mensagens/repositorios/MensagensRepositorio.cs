@@ -1,14 +1,12 @@
-﻿using Dominio.Mensagens.repositorios;
+﻿using Dominio.Mensagens.entidades;
+using Dominio.Mensagens.repositorios;
+using Dominio.Modelo;
+using NHibernate;
+using NHibernate.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VAssistsInfra.Auxiliares;
-using NHibernate;
-using Dominio.Mensagens.entidades;
-using Dominio.Modelo;
-using NHibernate.Linq;
 using VDominio.Modelo;
 
 namespace VAssistsInfra.Mensagens.repositorios
@@ -45,7 +43,6 @@ namespace VAssistsInfra.Mensagens.repositorios
             var pagina = pg - 1;
             var query = session.Query<Mensagem>();
 
-           
             var result = query.Skip(pagina * qt).Take(qt).ToList();
 
             response.mensagens = result;
@@ -53,6 +50,13 @@ namespace VAssistsInfra.Mensagens.repositorios
             response.quantidade = result.Count;
 
             return response;
+        }
+
+        public IEnumerable<Mensagem> ListarUltimasMensagens()
+        {
+            var result = session.Query<Mensagem>().OrderBy(x => x.DataInserida.Date).Take(5).ToList();
+
+            return result;
         }
     }
 }

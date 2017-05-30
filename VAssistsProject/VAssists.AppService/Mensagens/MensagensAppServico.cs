@@ -1,4 +1,5 @@
 ﻿using Dominio.Mensagens.repositorios;
+using System.Collections.Generic;
 using System.Linq;
 using VAssists.AppService.Auxiliares;
 using VAssists.AppService.Auxiliares.Interfaces;
@@ -8,7 +9,6 @@ using VAssists.DataTransfer.Mensagens.responses;
 using VAssistsInfra.Mensagens.repositorios;
 using VAssistsInfra.Usuarios.repositorios;
 using VDominio.Usuarios.repositorios;
-using System;
 
 namespace VAssists.AppService.Mensagens
 {
@@ -28,7 +28,7 @@ namespace VAssists.AppService.Mensagens
             try
             {
                 unitOfWork.BeginTransaction();
-              
+
                 mensagensRepositorio.DeletarMensagem(codigoMensagem);
                 unitOfWork.Commit();
             }
@@ -79,6 +79,19 @@ namespace VAssists.AppService.Mensagens
                     Texto = resultado.Texto
                 })
             };
+
+            return response;
+        }
+
+        public IEnumerable<MensagemResponse> ListarUltimasMensagens()
+        {
+            var response = mensagensRepositorio.ListarUltimasMensagens().Select(x => new MensagemResponse
+            {
+                Codigo = x.IdMensagem,
+                Data = x.DataInserida,
+                NomeUsuario = x.Usuario.NomeUsuario,
+                Texto = x.Texto
+            });
 
             return response;
         }

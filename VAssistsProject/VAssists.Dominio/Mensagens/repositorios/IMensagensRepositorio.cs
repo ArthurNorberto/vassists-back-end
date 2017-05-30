@@ -1,4 +1,5 @@
 ﻿using Dominio.Mensagens.entidades;
+using Dominio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Dominio.Mensagens.repositorios
         ListaMensagens ListarMensagens(int pg, int qt);
         void InserirMensagem(Usuario usuario, string texto);
         void DeletarMensagem(int codigoMensagem);
+        IEnumerable<Mensagem> ListarUltimasMensagens();
     }
 }
