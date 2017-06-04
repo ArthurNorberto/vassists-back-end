@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Web.Http;
 using System.Web.Http.Description;
 using VAssists.AppService.Pontos.Interfaces;
 using VAssists.DataTransfer.Pontos.requests;
@@ -45,6 +46,14 @@ namespace VAssistsProject.Controllers.Ponto
         public IHttpActionResult ListarMeusPontos([FromUri] ListarMeusPontosRequest request)
         {
             return Ok(registroPontoAppServico.ListarMeusPontos(request));
+        }
+
+        [HttpGet]
+        [Route("api/todos-ponto")]
+        [ResponseType(typeof(IEnumerable<PontoResponse>))]
+        public IHttpActionResult ListarTodosPontos()
+        {
+            return Ok(registroPontoAppServico.ListarTodosPontos());
         }
 
         [HttpDelete]

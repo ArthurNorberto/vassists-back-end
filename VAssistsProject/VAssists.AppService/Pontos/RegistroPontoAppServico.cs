@@ -1,19 +1,16 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using VAssists.AppService.Auxiliares;
+using VAssists.AppService.Auxiliares.Interfaces;
 using VAssists.AppService.Pontos.Interfaces;
 using VAssists.DataTransfer.Pontos.requests;
 using VAssists.DataTransfer.Pontos.responses;
-using VAssistsInfra.Conexao;
-using VDominio.Painel.repositorios;
-using VDominio.Pontos;
-using VDominio.Usuarios.repositorios;
-using System.Text.RegularExpressions;
-using System;
-using VAssists.AppService.Auxiliares;
-using VAssists.AppService.Auxiliares.Interfaces;
+using VAssistsInfra.Painel.repositorios;
 using VAssistsInfra.Pontos.repositorios;
 using VAssistsInfra.Usuarios.repositorios;
-using VAssistsInfra.Painel.repositorios;
+using VDominio.Painel.repositorios;
 using VDominio.Pontos.repositorios;
+using VDominio.Usuarios.repositorios;
 
 namespace VAssists.AppService.Pontos
 {
@@ -29,7 +26,6 @@ namespace VAssists.AppService.Pontos
 
             this.registroPontoRepositorio = new RegistroPontoRepositorio(unitOfWork.Session);
             this.usuarioRepositorio = new UsuarioRepositorio(unitOfWork.Session);
-
         }
 
         public void DeletarPonto(int codigoPonto)
@@ -99,7 +95,6 @@ namespace VAssists.AppService.Pontos
         {
             try
             {
-       
                 var retorno = registroPontoRepositorio.ListarPontos(request.NomeUsuario, request.DataInicial, request.DataFinal, request.Endereco, request.CodigoTipo, request.pg, request.qt);
 
                 PontosComPaginacaoResponse response = new PontosComPaginacaoResponse()
@@ -121,11 +116,9 @@ namespace VAssists.AppService.Pontos
                         Pais = resultado.Pais,
                         Estado = resultado.Estado,
                         Observacao = resultado.Observacao
-
                     })
                 };
 
-              
                 return response;
             }
             catch
@@ -139,17 +132,30 @@ namespace VAssists.AppService.Pontos
             }
         }
 
+        public IEnumerable<PontoResponse> ListarTodosPontos()
+        {
+            var pontos = registroPontoRepositorio.ListarTodosPontos();
+
+            var response = pontos.Select(x => new PontoResponse
+            {
+                Latitude = x.Latitude,
+                Longitude = x.Longitude,
+                NomeUsuario = x.Usuario.NomeUsuario,
+                Observacao = x.Observacao,
+                EnderecoCompleto = x.EnderecoCompleto
+            });
+
+            return response;
+        }
+
         public void RegistrarPonto(RegistrarPontoRequest request)
         {
-
             try
             {
                 unitOfWork.BeginTransaction();
 
                 var usuario = usuarioRepositorio.RetornaUsuario(request.CodigoUsuario);
                 var tipo = painelRepositorio.RetornarTipo(request.CodigoTipo);
-
-
 
                 registroPontoRepositorio.RegistrarPonto(usuario, request.Latitude, request.Longitude, tipo, request.Observacao, request.Endereco, request.Cidade, request.Estado, request.Pais);
 
@@ -170,8 +176,6 @@ namespace VAssists.AppService.Pontos
         {
             try
             {
-     
-
                 var resultado = registroPontoRepositorio.RetornarPonto(codigo);
 
                 PontoResponse response = new PontoResponse

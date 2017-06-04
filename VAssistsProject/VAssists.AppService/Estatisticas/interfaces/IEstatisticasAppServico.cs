@@ -11,5 +11,6 @@ namespace VAssists.AppService.Estatisticas.interfaces
     {
         IEnumerable<EstatisticaUsuarioResponse> EstatisticasUsuarios();
         IEnumerable<EstatisticaPontosResponse> EstatisticasPontos();
+        IEnumerable<EstatisticaPontoEstadoResponse> EstatisticasPontosEstado();
     }
 }

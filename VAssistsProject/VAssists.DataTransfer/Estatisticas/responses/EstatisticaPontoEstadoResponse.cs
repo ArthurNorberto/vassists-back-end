@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dominio.Estatisticas.entidades
+namespace VAssists.DataTransfer.Estatisticas.responses
 {
-    public class EstatisticasPonto
+    public class EstatisticaPontoEstadoResponse
     {
-        public string Tipo { get; set; }
         public string Estado { get; set; }
+        public string Tipo { get; set; }
         public int Quantidade { get; set; }
     }
 }

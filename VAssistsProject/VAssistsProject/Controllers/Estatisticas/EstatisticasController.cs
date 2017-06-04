@@ -35,6 +35,14 @@ namespace VAssistsProject.Controllers.Estatisicas
             return Ok(estatisticasAppServico.EstatisticasPontos());
         }
 
+        [HttpGet]
+        [Route("api/estatistica/ponto-estado")]
+        [ResponseType(typeof(IEnumerable<EstatisticaPontoEstadoResponse>))]
+        public IHttpActionResult EstatisticasPontosEstado()
+        {
+            return Ok(estatisticasAppServico.EstatisticasPontosEstado());
+        }
+
 
     }
 }

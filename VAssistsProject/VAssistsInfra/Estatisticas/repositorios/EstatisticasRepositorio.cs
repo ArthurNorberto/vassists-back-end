@@ -29,6 +29,19 @@ namespace VAssistsInfra.Estatisticas.repositorios
             return response;
         }
 
+        public IEnumerable<EstatisticasPonto> EstatisticasPontosEstado()
+        {
+            var consulta = session.Query<Ponto>().GroupBy(x => x.Estado).Select(x => new { Estado = x.Key, Quantidade = x.Count() }).ToList();
+
+            IEnumerable<EstatisticasPonto> response = consulta.Select(x => new EstatisticasPonto
+            {
+                Estado = x.Estado,
+                Quantidade = x.Quantidade
+            });
+
+            return response;
+        }
+
         public IEnumerable<EstatisticasUsuario> EstatisticasUsuarios()
         {
             var consulta = session.Query<Usuario>().GroupBy(x => x.Perfil.NomePerfil).Select(x => new { Perfil = x.Key, Quantidade = x.Count() }).ToList();

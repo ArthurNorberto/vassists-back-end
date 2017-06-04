@@ -32,6 +32,19 @@ namespace VAssists.AppService.Estatisticas
             return response;
         }
 
+        public IEnumerable<EstatisticaPontoEstadoResponse> EstatisticasPontosEstado()
+        {
+            var resultado = estatisticasRepositorio.EstatisticasPontosEstado();
+
+            IEnumerable<EstatisticaPontoEstadoResponse> response = resultado.Select(x => new EstatisticaPontoEstadoResponse
+            {
+                Estado = x.Estado,
+                Quantidade = x.Quantidade
+            });
+
+            return response;
+        }
+
         public IEnumerable<EstatisticaUsuarioResponse> EstatisticasUsuarios()
         {
             var resultado = estatisticasRepositorio.EstatisticasUsuarios();

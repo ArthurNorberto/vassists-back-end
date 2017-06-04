@@ -7,6 +7,7 @@ using VAssistsInfra.Auxiliares;
 using VDominio.Modelo;
 using VDominio.Pontos;
 using VDominio.Pontos.repositorios;
+using System.Collections.Generic;
 
 namespace VAssistsInfra.Pontos.repositorios
 {
@@ -101,6 +102,13 @@ namespace VAssistsInfra.Pontos.repositorios
             response.pontos = result;
             response.pagina = pg;
             response.quantidade = result.Count;
+
+            return response;
+        }
+
+        public IEnumerable<Ponto> ListarTodosPontos()
+        {
+            var response =  session.Query<Ponto>().ToList();
 
             return response;
         }

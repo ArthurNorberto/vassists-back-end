@@ -11,5 +11,6 @@ namespace Dominio.Estatisticas.repositorios
     {
         IEnumerable<EstatisticasUsuario> EstatisticasUsuarios();
         IEnumerable<EstatisticasPonto> EstatisticasPontos();
+        IEnumerable<EstatisticasPonto> EstatisticasPontosEstado();
     }
 }

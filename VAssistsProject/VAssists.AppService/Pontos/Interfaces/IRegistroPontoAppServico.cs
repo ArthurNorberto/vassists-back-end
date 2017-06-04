@@ -1,4 +1,5 @@
-﻿using VAssists.DataTransfer.Pontos.requests;
+﻿using System.Collections.Generic;
+using VAssists.DataTransfer.Pontos.requests;
 using VAssists.DataTransfer.Pontos.responses;
 
 namespace VAssists.AppService.Pontos.Interfaces
@@ -14,5 +15,6 @@ namespace VAssists.AppService.Pontos.Interfaces
         PontosComPaginacaoResponse ListarPontos(ListarPontosRequest request);
 
         PontosComPaginacaoResponse ListarMeusPontos(ListarMeusPontosRequest request);
+        IEnumerable<PontoResponse> ListarTodosPontos();
     }
 }

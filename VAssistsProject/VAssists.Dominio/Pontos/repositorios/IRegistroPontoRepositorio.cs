@@ -1,5 +1,6 @@
 ﻿using Dominio.Seguranca.entidades;
 using System;
+using System.Collections.Generic;
 using VDominio.Modelo;
 
 namespace VDominio.Pontos.repositorios
@@ -15,5 +16,7 @@ namespace VDominio.Pontos.repositorios
         ListaPontos ListarPontos(string nomeUsuario, DateTime? dataInicial, DateTime? dataFinal, string endereco, int codigoTipo, int pg, int qt);
 
         ListaPontos ListarMeusPontos(int codigoUsuario, DateTime? dataInicial, DateTime? dataFinal, string endereco, int codigoTipo, int pg, int qt);
+        
+        IEnumerable<Ponto> ListarTodosPontos();
     }
 }
